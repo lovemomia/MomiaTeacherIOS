@@ -1,0 +1,45 @@
+//
+//  PrefixHeader.pch
+//  MomiaIOS
+//
+//  Created by Deng Jun on 15/5/8.
+//  Copyright (c) 2015年 Deng Jun. All rights reserved.
+//
+
+#import "Constants.h"
+
+#import "UITextView+Placeholder.h"
+#import "UIView+Frame.h"
+#import "UILabel+ContentSize.h"
+#import "UIButton+Block.h"
+#import "Toast.h"
+
+#import "HttpService.h"
+#import "AccountService.h"
+#import "LocationService.h"
+#import "CacheService.h"
+#import "ConfigService.h"
+#import "LocationService.h"
+
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "AlertNotice.h"
+#import "Environment.h"
+#import "MBProgressHUD.h"
+#import "MobClick.h"
+
+////define this constant if you want to use Masonry without the 'mas_' prefix
+//#define MAS_SHORTHAND
+
+////define this constant if you want to enable auto-boxing for default syntax
+//#define MAS_SHORTHAND_GLOBALS
+
+#import "Masonry.h"
+#import "BaseModel.h"
+#import "NSError+MOError.h"
+#import "UITableView+FDTemplateLayoutCell.h"
+#import "UITableView+FDTemplateLayoutHeader.h"
+#ifndef __OPTIMIZE__
+#define NSLog(...) NSLog(__VA_ARGS__)
+#else
+#define NSLog(...) {}
+#endif

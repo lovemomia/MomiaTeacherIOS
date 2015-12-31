@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ApplyTeacherInputCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="真实姓名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iSK-jG-2Nc">
+                        <rect key="frame" x="14" y="12.5" width="60" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入您的真实姓名" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XWx-wC-PiO">
+                        <rect key="frame" x="89" y="0.0" width="216" height="43.5"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="XWx-wC-PiO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Lp5-fg-EV4"/>
+                    <constraint firstItem="iSK-jG-2Nc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="QPG-UE-3pq"/>
+                    <constraint firstAttribute="trailing" secondItem="XWx-wC-PiO" secondAttribute="trailing" constant="15" id="RQ1-P0-wfS"/>
+                    <constraint firstAttribute="bottom" secondItem="XWx-wC-PiO" secondAttribute="bottom" id="asi-5X-cK0"/>
+                    <constraint firstItem="XWx-wC-PiO" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gsE-Fg-PfX"/>
+                    <constraint firstItem="iSK-jG-2Nc" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="mad-Zn-Vbf"/>
+                    <constraint firstItem="XWx-wC-PiO" firstAttribute="leading" secondItem="iSK-jG-2Nc" secondAttribute="trailing" constant="15" id="vaS-JH-fQ1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="inputTextField" destination="XWx-wC-PiO" id="E8m-Xs-d2K"/>
+                <outlet property="titleLabel" destination="iSK-jG-2Nc" id="HK7-tD-wAT"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

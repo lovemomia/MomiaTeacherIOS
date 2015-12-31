@@ -1,0 +1,65 @@
+PODS:
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
+  - AFNetworking/NSURLConnection (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AFNetworking/UIKit (2.6.3):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - EDStarRating (1.1)
+  - ISDiskCache (0.1.3)
+  - JSONModel (1.1.2)
+  - Masonry (0.6.3)
+  - MBProgressHUD (0.9.1)
+  - MJRefresh (3.0.7)
+  - SDWebImage (3.7.3):
+    - SDWebImage/Core (= 3.7.3)
+  - SDWebImage/Core (3.7.3)
+  - THProgressView (1.0)
+  - TTTAttributedLabel (1.13.4)
+  - UITableView+FDTemplateLayoutCell (1.3)
+  - UMengAnalytics-NO-IDFA (3.6.7)
+
+DEPENDENCIES:
+  - AFNetworking (~> 2.0)
+  - EDStarRating
+  - ISDiskCache
+  - JSONModel
+  - Masonry
+  - MBProgressHUD (~> 0.9.1)
+  - MJRefresh
+  - SDWebImage
+  - THProgressView (~> 1.0)
+  - TTTAttributedLabel
+  - UITableView+FDTemplateLayoutCell
+  - UMengAnalytics-NO-IDFA
+
+SPEC CHECKSUMS:
+  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  EDStarRating: a41a6440a945020745d0e9ff8ada7d1afa952114
+  ISDiskCache: 83d1b6ca5c2f5f2d14832ae1e9fcd6e20de43142
+  JSONModel: 216584d0311b053ff714f1d6cb700dbf890847bc
+  Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  MJRefresh: f3e1228ec3d38c7ba5208d58032631a52f39f495
+  SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
+  THProgressView: 999dc78f748f4cb6d69408f545de4d82ef7f1cec
+  TTTAttributedLabel: 0a2ac7b2dd726d32a070dafb01446026b11e624f
+  UITableView+FDTemplateLayoutCell: d5be6056b5060313f5955a2590ecd33142ad713d
+  UMengAnalytics-NO-IDFA: 6d02561a00579b2e37718f204eb81347df5d7b8b
+
+COCOAPODS: 0.37.1
