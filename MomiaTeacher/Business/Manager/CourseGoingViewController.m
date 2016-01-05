@@ -11,12 +11,12 @@
 #import "CourseGoingModel.h"
 
 #import "CourseListItemCell.h"
-#import "ChildListItemCell.h"
+#import "GoingStudentListItemCell.h"
 
 static NSString * identifierCourseListItemCell = @"CourseListItemCell";
-static NSString * identifierChildListItemCell = @"ChildListItemCell";
+static NSString * identifierGoingStudentListItemCell = @"GoingStudentListItemCell";
 
-@interface CourseGoingViewController ()
+@interface CourseGoingViewController ()<GoingStudentListItemCellDelegate>
 
 @property (nonatomic, strong) CourseGoingModel *model;
 
@@ -29,7 +29,7 @@ static NSString * identifierChildListItemCell = @"ChildListItemCell";
     // Do any additional setup after loading the view.
     
     [CourseListItemCell registerCellFromNibWithTableView:self.tableView withIdentifier:identifierCourseListItemCell];
-    [ChildListItemCell registerCellFromNibWithTableView:self.tableView withIdentifier:identifierChildListItemCell];
+    [GoingStudentListItemCell registerCellFromNibWithTableView:self.tableView withIdentifier:identifierGoingStudentListItemCell];
     
     self.tableView.mj_header = [MJRefreshHelper createGifHeaderWithRefreshingTarget:self refreshingAction:@selector(requestData)];
     
@@ -71,6 +71,28 @@ static NSString * identifierChildListItemCell = @"ChildListItemCell";
     
 }
 
+#pragma mark - GoingStudentListItemCellDelegate
+
+- (void)onOperateBtnClicked:(Student *)student {
+    Course *course = self.model.data.course;
+    if ([student.checkin boolValue]) {
+        [self openURL:[NSString stringWithFormat:@"studentrecord?coid=%@&sid=%@&cid=%@", course.courseId, course.courseSkuId, student.ids]];
+    } else {
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        
+        [[HttpService defaultService]POST:URL_APPEND_PATH(@"/teacher/course/checkin") parameters:@{@"uid":student.userId, @"pid":student.packageId, @"coid":course.courseId, @"sid":course.courseSkuId}  JSONModelClass:[BaseModel class] success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+            
+            student.checkin = [NSNumber numberWithBool:YES];
+            [self.tableView reloadData];
+            
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+            [self showDialogWithTitle:nil message:error.message];
+        }];
+    }
+}
+
 /*
 #pragma mark - Navigation
 
@@ -80,6 +102,14 @@ static NSString * identifierChildListItemCell = @"ChildListItemCell";
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.row > 0) {
+        Student *student = self.model.data.students[indexPath.row - 1];
+        [self openURL:[NSString stringWithFormat:@"studentdetail?id=%@", student.ids]];
+    }
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     if (self.model) {
@@ -94,9 +124,9 @@ static NSString * identifierChildListItemCell = @"ChildListItemCell";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
-        return [CourseListItemCell heightWithTableView:tableView withIdentifier:identifierChildListItemCell forIndexPath:indexPath data:self.model.data.course];
+        return [CourseListItemCell heightWithTableView:tableView withIdentifier:identifierGoingStudentListItemCell forIndexPath:indexPath data:self.model.data.course];
     }
-    return [ChildListItemCell heightWithTableView:tableView withIdentifier:identifierChildListItemCell forIndexPath:indexPath data:self.model.data.students[indexPath.row - 1]];
+    return 70;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -107,7 +137,8 @@ static NSString * identifierChildListItemCell = @"ChildListItemCell";
         cell = courseCell;
         
     } else {
-        ChildListItemCell *childCell = [ChildListItemCell cellWithTableView:tableView forIndexPath:indexPath withIdentifier:identifierChildListItemCell];
+        GoingStudentListItemCell *childCell = [GoingStudentListItemCell cellWithTableView:tableView forIndexPath:indexPath withIdentifier:identifierGoingStudentListItemCell];
+        childCell.delegate = self;
         childCell.data = self.model.data.students[indexPath.row - 1];
         cell = childCell;
     }

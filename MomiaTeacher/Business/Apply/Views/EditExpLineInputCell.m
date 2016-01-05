@@ -12,6 +12,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    [self.inputTextFiled setValue:UIColorFromRGB(0x999999) forKeyPath:@"_placeholderLabel.textColor"];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="196" id="gee-wS-Yiq" customClass="ContentInputCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="196"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gee-wS-Yiq" id="9kS-Th-6Tj">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="195.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5hS-NX-3Dp">
+                        <rect key="frame" x="10" y="35" width="300" height="150.5"/>
+                        <color key="backgroundColor" red="0.96862745100000003" green="0.97254901959999995" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="OIq-ZE-etP"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="300/300" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9h-i1-sPr">
+                        <rect key="frame" x="257" y="169.5" width="46" height="13.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="课堂记事" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrg-SB-xR1">
+                        <rect key="frame" x="10" y="10" width="56" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="5hS-NX-3Dp" secondAttribute="trailing" constant="10" id="JVw-mk-UfM"/>
+                    <constraint firstItem="vrg-SB-xR1" firstAttribute="top" secondItem="9kS-Th-6Tj" secondAttribute="top" constant="10" id="R8V-JO-jge"/>
+                    <constraint firstAttribute="bottom" secondItem="e9h-i1-sPr" secondAttribute="bottom" constant="13" id="TEf-wG-vbs"/>
+                    <constraint firstAttribute="trailing" secondItem="e9h-i1-sPr" secondAttribute="trailing" constant="17" id="Y4S-Fg-Lnz"/>
+                    <constraint firstItem="vrg-SB-xR1" firstAttribute="leading" secondItem="9kS-Th-6Tj" secondAttribute="leading" constant="10" id="avk-hV-6mm"/>
+                    <constraint firstItem="5hS-NX-3Dp" firstAttribute="top" secondItem="vrg-SB-xR1" secondAttribute="bottom" constant="8" id="kLW-94-Zp6"/>
+                    <constraint firstAttribute="bottom" secondItem="5hS-NX-3Dp" secondAttribute="bottom" constant="10" id="vzo-BO-e7N"/>
+                    <constraint firstItem="5hS-NX-3Dp" firstAttribute="leading" secondItem="9kS-Th-6Tj" secondAttribute="leading" constant="10" id="ziV-Ne-zgP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contentTv" destination="5hS-NX-3Dp" id="p4V-Ss-OkL"/>
+                <outlet property="countLabel" destination="e9h-i1-sPr" id="JA8-u8-H5L"/>
+                <outlet property="titleLabel" destination="vrg-SB-xR1" id="2xJ-gJ-JH9"/>
+            </connections>
+            <point key="canvasLocation" x="292" y="456"/>
+        </tableViewCell>
+    </objects>
+</document>

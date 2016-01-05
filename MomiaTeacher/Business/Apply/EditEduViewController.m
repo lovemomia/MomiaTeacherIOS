@@ -193,7 +193,7 @@ static NSString *identifierEditExpLineInputCell = @"EditExpLineInputCell";
             cell.textLabel.textColor = UIColorFromRGB(0x333333);
             cell.textLabel.text = self.time;
         } else {
-            cell.textLabel.textColor = UIColorFromRGB(0xcccccc);
+            cell.textLabel.textColor = UIColorFromRGB(0x999999);
             cell.textLabel.text = @"在校时间";
         }
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;

@@ -10,6 +10,9 @@
 
 @interface CourseListItemCell : MOTableCell<MOTableCellDataProtocol>
 
+@property (nonatomic, assign) BOOL showStatus;
+@property (weak, nonatomic) IBOutlet UIImageView *statusIv;
+
 -(void)setData:(id) model;
 
 @end

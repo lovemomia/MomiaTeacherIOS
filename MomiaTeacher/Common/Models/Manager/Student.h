@@ -10,15 +10,17 @@
 
 @interface Student : JSONModel
 
-@property (nonatomic, assign) NSInteger *type;
 @property (nonatomic, strong) NSNumber *ids;
 @property (nonatomic, strong) NSNumber *userId;
-@property (nonatomic, strong) NSNumber *packageId;
 @property (nonatomic, strong) NSString *avatar;
-@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString<Optional> *name;
+@property (nonatomic, strong) NSString<Optional> *age;
+@property (nonatomic, strong) NSString<Optional> *sex;
 
-@property (nonatomic, strong) NSString *age;
-@property (nonatomic, strong) NSString *sex;
-@property (nonatomic, strong) NSNumber *checkedin;
+@property (nonatomic, strong) NSNumber<Optional> *type;
+@property (nonatomic, strong) NSNumber<Optional> *packageId;
+@property (nonatomic, strong) NSNumber<Optional> *checkin;
+
+@property (nonatomic, strong) NSNumber<Optional> *commented;
 
 @end

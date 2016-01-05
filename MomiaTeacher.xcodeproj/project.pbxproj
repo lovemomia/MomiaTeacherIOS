@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		84AC208F870ED66E2640282D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E61589321BB5578818D488 /* libPods.a */; };
+		BC6CF51F1C3B5DF0006F314C /* StudentRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6CF51E1C3B5DF0006F314C /* StudentRecordViewController.m */; };
+		BC6CF5231C3B6E15006F314C /* ContentInputCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6CF5211C3B6E15006F314C /* ContentInputCell.m */; };
+		BC6CF5241C3B6E15006F314C /* ContentInputCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC6CF5221C3B6E15006F314C /* ContentInputCell.xib */; };
+		BC6CF5271C3B744F006F314C /* StudentRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6CF5261C3B744F006F314C /* StudentRecordModel.m */; };
 		BCAF11791C2CDFBE0089945B /* CourseListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF11781C2CDFBE0089945B /* CourseListViewController.m */; };
 		BCAF117D1C2D29A20089945B /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF117C1C2D29A20089945B /* Student.m */; };
 		BCAF11801C2D2C280089945B /* CourseGoingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF117F1C2D2C280089945B /* CourseGoingModel.m */; };
-		BCAF11841C2D45490089945B /* ChildListItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF11821C2D45490089945B /* ChildListItemCell.m */; };
-		BCAF11851C2D45490089945B /* ChildListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCAF11831C2D45490089945B /* ChildListItemCell.xib */; };
+		BCAF11841C2D45490089945B /* GoingStudentListItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF11821C2D45490089945B /* GoingStudentListItemCell.m */; };
+		BCAF11851C2D45490089945B /* GoingStudentListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCAF11831C2D45490089945B /* GoingStudentListItemCell.xib */; };
 		BCAF11891C3110E50089945B /* ApplyTeacherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF11881C3110E50089945B /* ApplyTeacherViewController.m */; };
 		BCAF118E1C3114850089945B /* ApplyTeacherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF118D1C3114850089945B /* ApplyTeacherModel.m */; };
 		BCAF11921C3285D20089945B /* ApplyTeacherInputCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF11901C3285D20089945B /* ApplyTeacherInputCell.m */; };
@@ -31,6 +35,17 @@
 		BCAF11D11C33ED330089945B /* ActionSheetPickView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCAF11D01C33ED330089945B /* ActionSheetPickView.xib */; };
 		BCAF11D31C34C5660089945B /* date.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCAF11D21C34C5660089945B /* date.plist */; };
 		BCAF11D61C3533850089945B /* ApplyTeacherPicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCAF11D51C3533850089945B /* ApplyTeacherPicCell.xib */; };
+		BCAF11D91C3A1EF70089945B /* StudentListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF11D81C3A1EF70089945B /* StudentListViewController.m */; };
+		BCAF11DD1C3A1FF30089945B /* StudentListItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF11DB1C3A1FF30089945B /* StudentListItemCell.m */; };
+		BCAF11DE1C3A1FF30089945B /* StudentListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCAF11DC1C3A1FF30089945B /* StudentListItemCell.xib */; };
+		BCAF11E11C3A286C0089945B /* StudentListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF11E01C3A286C0089945B /* StudentListModel.m */; };
+		BCAF11E41C3A42CB0089945B /* StudentDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF11E31C3A42CB0089945B /* StudentDetailViewController.m */; };
+		BCAF11E81C3A4E2B0089945B /* StudentDetailCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF11E61C3A4E2B0089945B /* StudentDetailCommentCell.m */; };
+		BCAF11E91C3A4E2B0089945B /* StudentDetailCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCAF11E71C3A4E2B0089945B /* StudentDetailCommentCell.xib */; };
+		BCAF11EC1C3A50C90089945B /* StudentDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF11EB1C3A50C90089945B /* StudentDetailModel.m */; };
+		BCAF11EF1C3A87550089945B /* StudentAddCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF11EE1C3A87550089945B /* StudentAddCommentViewController.m */; };
+		BCAF11F31C3A892D0089945B /* CharacterTagsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF11F11C3A892D0089945B /* CharacterTagsCell.m */; };
+		BCAF11F41C3A892D0089945B /* CharacterTagsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCAF11F21C3A892D0089945B /* CharacterTagsCell.xib */; };
 		BCEA00001C2AA07800CB082D /* MLSelectPhotoPickerGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEAFF3F1C2AA07800CB082D /* MLSelectPhotoPickerGroupViewController.m */; };
 		BCEA00011C2AA07800CB082D /* MLSelectPhotoPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEAFF411C2AA07800CB082D /* MLSelectPhotoPickerViewController.m */; };
 		BCEA00021C2AA07800CB082D /* MLPhotoPickerImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEAFF441C2AA07800CB082D /* MLPhotoPickerImageView.m */; };
@@ -85,8 +100,6 @@
 		BCEA01ED1C2AA0B600CB082D /* FeedbackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEA01011C2AA0B600CB082D /* FeedbackCell.m */; };
 		BCEA01EE1C2AA0B600CB082D /* FeedbackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCEA01021C2AA0B600CB082D /* FeedbackCell.xib */; };
 		BCEA01EF1C2AA0B600CB082D /* MineInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCEA01031C2AA0B600CB082D /* MineInfoCell.xib */; };
-		BCEA01F01C2AA0B600CB082D /* MyFavCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEA01051C2AA0B600CB082D /* MyFavCell.m */; };
-		BCEA01F11C2AA0B600CB082D /* MyFavCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCEA01061C2AA0B600CB082D /* MyFavCell.xib */; };
 		BCEA01F21C2AA0B600CB082D /* PersonChildHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEA01081C2AA0B600CB082D /* PersonChildHeaderCell.m */; };
 		BCEA01F31C2AA0B600CB082D /* PersonChildHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCEA01091C2AA0B600CB082D /* PersonChildHeaderCell.xib */; };
 		BCEA01F41C2AA0B600CB082D /* PersonLogoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCEA010A1C2AA0B600CB082D /* PersonLogoCell.xib */; };
@@ -299,15 +312,22 @@
 		6B4E3E7CB08A22D3A6C69F79 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		83E61589321BB5578818D488 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		908A67A643EA6A4D959938FF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		BC6CF51D1C3B5DF0006F314C /* StudentRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StudentRecordViewController.h; path = Manager/StudentRecordViewController.h; sourceTree = "<group>"; };
+		BC6CF51E1C3B5DF0006F314C /* StudentRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StudentRecordViewController.m; path = Manager/StudentRecordViewController.m; sourceTree = "<group>"; };
+		BC6CF5201C3B6E15006F314C /* ContentInputCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContentInputCell.h; path = Manager/Views/ContentInputCell.h; sourceTree = "<group>"; };
+		BC6CF5211C3B6E15006F314C /* ContentInputCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContentInputCell.m; path = Manager/Views/ContentInputCell.m; sourceTree = "<group>"; };
+		BC6CF5221C3B6E15006F314C /* ContentInputCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ContentInputCell.xib; path = Manager/Views/ContentInputCell.xib; sourceTree = "<group>"; };
+		BC6CF5251C3B744F006F314C /* StudentRecordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StudentRecordModel.h; path = Manager/StudentRecordModel.h; sourceTree = "<group>"; };
+		BC6CF5261C3B744F006F314C /* StudentRecordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StudentRecordModel.m; path = Manager/StudentRecordModel.m; sourceTree = "<group>"; };
 		BCAF11771C2CDFBE0089945B /* CourseListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CourseListViewController.h; path = Manager/CourseListViewController.h; sourceTree = "<group>"; };
 		BCAF11781C2CDFBE0089945B /* CourseListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CourseListViewController.m; path = Manager/CourseListViewController.m; sourceTree = "<group>"; };
 		BCAF117B1C2D29A20089945B /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Student.h; path = Manager/Student.h; sourceTree = "<group>"; };
 		BCAF117C1C2D29A20089945B /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Student.m; path = Manager/Student.m; sourceTree = "<group>"; };
 		BCAF117E1C2D2C280089945B /* CourseGoingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CourseGoingModel.h; path = Manager/CourseGoingModel.h; sourceTree = "<group>"; };
 		BCAF117F1C2D2C280089945B /* CourseGoingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CourseGoingModel.m; path = Manager/CourseGoingModel.m; sourceTree = "<group>"; };
-		BCAF11811C2D45490089945B /* ChildListItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChildListItemCell.h; path = Manager/Views/ChildListItemCell.h; sourceTree = "<group>"; };
-		BCAF11821C2D45490089945B /* ChildListItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChildListItemCell.m; path = Manager/Views/ChildListItemCell.m; sourceTree = "<group>"; };
-		BCAF11831C2D45490089945B /* ChildListItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ChildListItemCell.xib; path = Manager/Views/ChildListItemCell.xib; sourceTree = "<group>"; };
+		BCAF11811C2D45490089945B /* GoingStudentListItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoingStudentListItemCell.h; path = Manager/Views/GoingStudentListItemCell.h; sourceTree = "<group>"; };
+		BCAF11821C2D45490089945B /* GoingStudentListItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoingStudentListItemCell.m; path = Manager/Views/GoingStudentListItemCell.m; sourceTree = "<group>"; };
+		BCAF11831C2D45490089945B /* GoingStudentListItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GoingStudentListItemCell.xib; path = Manager/Views/GoingStudentListItemCell.xib; sourceTree = "<group>"; };
 		BCAF11871C3110E50089945B /* ApplyTeacherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ApplyTeacherViewController.h; path = Apply/ApplyTeacherViewController.h; sourceTree = "<group>"; };
 		BCAF11881C3110E50089945B /* ApplyTeacherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ApplyTeacherViewController.m; path = Apply/ApplyTeacherViewController.m; sourceTree = "<group>"; };
 		BCAF118C1C3114850089945B /* ApplyTeacherModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ApplyTeacherModel.h; path = Apply/ApplyTeacherModel.h; sourceTree = "<group>"; };
@@ -337,6 +357,25 @@
 		BCAF11D01C33ED330089945B /* ActionSheetPickView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActionSheetPickView.xib; sourceTree = "<group>"; };
 		BCAF11D21C34C5660089945B /* date.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = date.plist; path = Apply/date.plist; sourceTree = "<group>"; };
 		BCAF11D51C3533850089945B /* ApplyTeacherPicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ApplyTeacherPicCell.xib; path = Apply/Views/ApplyTeacherPicCell.xib; sourceTree = "<group>"; };
+		BCAF11D71C3A1EF70089945B /* StudentListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StudentListViewController.h; path = Manager/StudentListViewController.h; sourceTree = "<group>"; };
+		BCAF11D81C3A1EF70089945B /* StudentListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StudentListViewController.m; path = Manager/StudentListViewController.m; sourceTree = "<group>"; };
+		BCAF11DA1C3A1FF30089945B /* StudentListItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StudentListItemCell.h; path = Manager/Views/StudentListItemCell.h; sourceTree = "<group>"; };
+		BCAF11DB1C3A1FF30089945B /* StudentListItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StudentListItemCell.m; path = Manager/Views/StudentListItemCell.m; sourceTree = "<group>"; };
+		BCAF11DC1C3A1FF30089945B /* StudentListItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StudentListItemCell.xib; path = Manager/Views/StudentListItemCell.xib; sourceTree = "<group>"; };
+		BCAF11DF1C3A286C0089945B /* StudentListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StudentListModel.h; path = Manager/StudentListModel.h; sourceTree = "<group>"; };
+		BCAF11E01C3A286C0089945B /* StudentListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StudentListModel.m; path = Manager/StudentListModel.m; sourceTree = "<group>"; };
+		BCAF11E21C3A42CB0089945B /* StudentDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StudentDetailViewController.h; path = Manager/StudentDetailViewController.h; sourceTree = "<group>"; };
+		BCAF11E31C3A42CB0089945B /* StudentDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StudentDetailViewController.m; path = Manager/StudentDetailViewController.m; sourceTree = "<group>"; };
+		BCAF11E51C3A4E2B0089945B /* StudentDetailCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StudentDetailCommentCell.h; path = Manager/Views/StudentDetailCommentCell.h; sourceTree = "<group>"; };
+		BCAF11E61C3A4E2B0089945B /* StudentDetailCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StudentDetailCommentCell.m; path = Manager/Views/StudentDetailCommentCell.m; sourceTree = "<group>"; };
+		BCAF11E71C3A4E2B0089945B /* StudentDetailCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StudentDetailCommentCell.xib; path = Manager/Views/StudentDetailCommentCell.xib; sourceTree = "<group>"; };
+		BCAF11EA1C3A50C90089945B /* StudentDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StudentDetailModel.h; path = Manager/StudentDetailModel.h; sourceTree = "<group>"; };
+		BCAF11EB1C3A50C90089945B /* StudentDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StudentDetailModel.m; path = Manager/StudentDetailModel.m; sourceTree = "<group>"; };
+		BCAF11ED1C3A87550089945B /* StudentAddCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StudentAddCommentViewController.h; path = Manager/StudentAddCommentViewController.h; sourceTree = "<group>"; };
+		BCAF11EE1C3A87550089945B /* StudentAddCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StudentAddCommentViewController.m; path = Manager/StudentAddCommentViewController.m; sourceTree = "<group>"; };
+		BCAF11F01C3A892D0089945B /* CharacterTagsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CharacterTagsCell.h; path = Manager/Views/CharacterTagsCell.h; sourceTree = "<group>"; };
+		BCAF11F11C3A892D0089945B /* CharacterTagsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CharacterTagsCell.m; path = Manager/Views/CharacterTagsCell.m; sourceTree = "<group>"; };
+		BCAF11F21C3A892D0089945B /* CharacterTagsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CharacterTagsCell.xib; path = Manager/Views/CharacterTagsCell.xib; sourceTree = "<group>"; };
 		BCEA001C1C2AA0B600CB082D /* ChatGroupMemberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatGroupMemberViewController.h; sourceTree = "<group>"; };
 		BCEA001D1C2AA0B600CB082D /* ChatGroupMemberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatGroupMemberViewController.m; sourceTree = "<group>"; };
 		BCEA001E1C2AA0B600CB082D /* ChatListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatListViewController.h; sourceTree = "<group>"; };
@@ -387,9 +426,6 @@
 		BCEA01011C2AA0B600CB082D /* FeedbackCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackCell.m; sourceTree = "<group>"; };
 		BCEA01021C2AA0B600CB082D /* FeedbackCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedbackCell.xib; sourceTree = "<group>"; };
 		BCEA01031C2AA0B600CB082D /* MineInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineInfoCell.xib; sourceTree = "<group>"; };
-		BCEA01041C2AA0B600CB082D /* MyFavCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFavCell.h; sourceTree = "<group>"; };
-		BCEA01051C2AA0B600CB082D /* MyFavCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFavCell.m; sourceTree = "<group>"; };
-		BCEA01061C2AA0B600CB082D /* MyFavCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyFavCell.xib; sourceTree = "<group>"; };
 		BCEA01071C2AA0B600CB082D /* PersonChildHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonChildHeaderCell.h; sourceTree = "<group>"; };
 		BCEA01081C2AA0B600CB082D /* PersonChildHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonChildHeaderCell.m; sourceTree = "<group>"; };
 		BCEA01091C2AA0B600CB082D /* PersonChildHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonChildHeaderCell.xib; sourceTree = "<group>"; };
@@ -860,6 +896,12 @@
 				BCAF117F1C2D2C280089945B /* CourseGoingModel.m */,
 				BCEAFE511C2AA07800CB082D /* CourseListModel.h */,
 				BCEAFE521C2AA07800CB082D /* CourseListModel.m */,
+				BCAF11DF1C3A286C0089945B /* StudentListModel.h */,
+				BCAF11E01C3A286C0089945B /* StudentListModel.m */,
+				BCAF11EA1C3A50C90089945B /* StudentDetailModel.h */,
+				BCAF11EB1C3A50C90089945B /* StudentDetailModel.m */,
+				BC6CF5251C3B744F006F314C /* StudentRecordModel.h */,
+				BC6CF5261C3B744F006F314C /* StudentRecordModel.m */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -1028,9 +1070,6 @@
 				BCEA01011C2AA0B600CB082D /* FeedbackCell.m */,
 				BCEA01021C2AA0B600CB082D /* FeedbackCell.xib */,
 				BCEA01031C2AA0B600CB082D /* MineInfoCell.xib */,
-				BCEA01041C2AA0B600CB082D /* MyFavCell.h */,
-				BCEA01051C2AA0B600CB082D /* MyFavCell.m */,
-				BCEA01061C2AA0B600CB082D /* MyFavCell.xib */,
 				BCEA01071C2AA0B600CB082D /* PersonChildHeaderCell.h */,
 				BCEA01081C2AA0B600CB082D /* PersonChildHeaderCell.m */,
 				BCEA01091C2AA0B600CB082D /* PersonChildHeaderCell.xib */,
@@ -1180,6 +1219,14 @@
 				BCEA02B61C2CDBF400CB082D /* CourseGoingViewController.m */,
 				BCAF11771C2CDFBE0089945B /* CourseListViewController.h */,
 				BCAF11781C2CDFBE0089945B /* CourseListViewController.m */,
+				BCAF11D71C3A1EF70089945B /* StudentListViewController.h */,
+				BCAF11D81C3A1EF70089945B /* StudentListViewController.m */,
+				BCAF11E21C3A42CB0089945B /* StudentDetailViewController.h */,
+				BCAF11E31C3A42CB0089945B /* StudentDetailViewController.m */,
+				BCAF11ED1C3A87550089945B /* StudentAddCommentViewController.h */,
+				BCAF11EE1C3A87550089945B /* StudentAddCommentViewController.m */,
+				BC6CF51D1C3B5DF0006F314C /* StudentRecordViewController.h */,
+				BC6CF51E1C3B5DF0006F314C /* StudentRecordViewController.m */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -1190,9 +1237,21 @@
 				BCEA006E1C2AA0B600CB082D /* CourseListItemCell.h */,
 				BCEA006F1C2AA0B600CB082D /* CourseListItemCell.m */,
 				BCEA00701C2AA0B600CB082D /* CourseListItemCell.xib */,
-				BCAF11811C2D45490089945B /* ChildListItemCell.h */,
-				BCAF11821C2D45490089945B /* ChildListItemCell.m */,
-				BCAF11831C2D45490089945B /* ChildListItemCell.xib */,
+				BCAF11811C2D45490089945B /* GoingStudentListItemCell.h */,
+				BCAF11821C2D45490089945B /* GoingStudentListItemCell.m */,
+				BCAF11831C2D45490089945B /* GoingStudentListItemCell.xib */,
+				BCAF11DA1C3A1FF30089945B /* StudentListItemCell.h */,
+				BCAF11DB1C3A1FF30089945B /* StudentListItemCell.m */,
+				BCAF11DC1C3A1FF30089945B /* StudentListItemCell.xib */,
+				BCAF11E51C3A4E2B0089945B /* StudentDetailCommentCell.h */,
+				BCAF11E61C3A4E2B0089945B /* StudentDetailCommentCell.m */,
+				BCAF11E71C3A4E2B0089945B /* StudentDetailCommentCell.xib */,
+				BCAF11F01C3A892D0089945B /* CharacterTagsCell.h */,
+				BCAF11F11C3A892D0089945B /* CharacterTagsCell.m */,
+				BCAF11F21C3A892D0089945B /* CharacterTagsCell.xib */,
+				BC6CF5201C3B6E15006F314C /* ContentInputCell.h */,
+				BC6CF5211C3B6E15006F314C /* ContentInputCell.m */,
+				BC6CF5221C3B6E15006F314C /* ContentInputCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -1962,6 +2021,7 @@
 				BCEAFFEC1C2AA07800CB082D /* LoadingCell.xib in Resources */,
 				BCEA01EF1C2AA0B600CB082D /* MineInfoCell.xib in Resources */,
 				BCEAFDD81C2A9A8400CB082D /* LaunchScreen.storyboard in Resources */,
+				BCAF11DE1C3A1FF30089945B /* StudentListItemCell.xib in Resources */,
 				BCEA01E31C2AA0B600CB082D /* ForgetPasswordCell.xib in Resources */,
 				BCEA025C1C2AAE8400CB082D /* Emoji.plist in Resources */,
 				BCEAFFE31C2AA07800CB082D /* CommonHeaderView.xib in Resources */,
@@ -1975,7 +2035,7 @@
 				BCEA025F1C2AAE8400CB082D /* release_notes_ios.txt in Resources */,
 				BCEA025D1C2AAE8400CB082D /* RongCloudKit.strings in Resources */,
 				BCEAFDD51C2A9A8400CB082D /* Assets.xcassets in Resources */,
-				BCAF11851C2D45490089945B /* ChildListItemCell.xib in Resources */,
+				BCAF11851C2D45490089945B /* GoingStudentListItemCell.xib in Resources */,
 				BCEAFFEE1C2AA07800CB082D /* LoadingErrorCell.xib in Resources */,
 				BCEA02561C2AAE8400CB082D /* AlipaySDK.bundle in Resources */,
 				BCEA01E41C2AA0B600CB082D /* LoginCell.xib in Resources */,
@@ -1989,7 +2049,9 @@
 				BCEAFFE51C2AA07800CB082D /* CommonTableViewCell.xib in Resources */,
 				BCEA02A31C2AB6E500CB082D /* ico_make.png in Resources */,
 				BCEA01EE1C2AA0B600CB082D /* FeedbackCell.xib in Resources */,
-				BCEA01F11C2AA0B600CB082D /* MyFavCell.xib in Resources */,
+				BCAF11F41C3A892D0089945B /* CharacterTagsCell.xib in Resources */,
+				BCAF11E91C3A4E2B0089945B /* StudentDetailCommentCell.xib in Resources */,
+				BC6CF5241C3B6E15006F314C /* ContentInputCell.xib in Resources */,
 				BCEA01F41C2AA0B600CB082D /* PersonLogoCell.xib in Resources */,
 				BCAF11D11C33ED330089945B /* ActionSheetPickView.xib in Resources */,
 				BCEA02641C2AAE8400CB082D /* read_me.txt in Resources */,
@@ -2082,10 +2144,12 @@
 				BCEAFF8C1C2AA07800CB082D /* IMGroupModel.m in Sources */,
 				BCEAFFE41C2AA07800CB082D /* CommonTableViewCell.m in Sources */,
 				BCEAFFCB1C2AA07800CB082D /* Account.m in Sources */,
+				BC6CF51F1C3B5DF0006F314C /* StudentRecordViewController.m in Sources */,
 				BCAF11791C2CDFBE0089945B /* CourseListViewController.m in Sources */,
 				BCEAFFBE1C2AA07800CB082D /* AlipayOrderModel.m in Sources */,
 				BCEAFFCE1C2AA07800CB082D /* IMTokenModel.m in Sources */,
 				BCEA017B1C2AA0B600CB082D /* GroupNoticeView.m in Sources */,
+				BCAF11E11C3A286C0089945B /* StudentListModel.m in Sources */,
 				BCEAFF8F1C2AA07800CB082D /* City.m in Sources */,
 				BCEAFFE81C2AA07800CB082D /* LJTabBar.m in Sources */,
 				BCEAFFC21C2AA07800CB082D /* PayCheckModel.m in Sources */,
@@ -2148,6 +2212,8 @@
 				BCEA02A41C2AB6E500CB082D /* JSDropDownMenu.m in Sources */,
 				BCEA01E11C2AA0B600CB082D /* MyStatusViewController.m in Sources */,
 				BCEAFF8E1C2AA07800CB082D /* IMUserModel.m in Sources */,
+				BCAF11E41C3A42CB0089945B /* StudentDetailViewController.m in Sources */,
+				BCAF11DD1C3A1FF30089945B /* StudentListItemCell.m in Sources */,
 				BCEA01F71C2AA0B600CB082D /* UserInfoHeaderView.m in Sources */,
 				BCEAFF831C2AA07800CB082D /* UIButton+Block.m in Sources */,
 				BCEAFFD71C2AA07800CB082D /* LocationService.m in Sources */,
@@ -2159,6 +2225,8 @@
 				BCEAFFFE1C2AA07800CB082D /* MLSelectPhotoNavigationViewController.m in Sources */,
 				BCEAFF9E1C2AA07800CB082D /* ReviewListModel.m in Sources */,
 				BCAF11921C3285D20089945B /* ApplyTeacherInputCell.m in Sources */,
+				BCAF11D91C3A1EF70089945B /* StudentListViewController.m in Sources */,
+				BC6CF5231C3B6E15006F314C /* ContentInputCell.m in Sources */,
 				BCEAFFFB1C2AA07800CB082D /* MLSelectPhotoPickerDatas.m in Sources */,
 				BCEAFF7A1C2AA07800CB082D /* NSDate+Age.m in Sources */,
 				BCEAFFBB1C2AA07800CB082D /* PostPersonModel.m in Sources */,
@@ -2179,8 +2247,10 @@
 				BCEA00021C2AA07800CB082D /* MLPhotoPickerImageView.m in Sources */,
 				BCEAFFDB1C2AA07800CB082D /* DateManager.m in Sources */,
 				BCEA000C1C2AA07800CB082D /* MOLabel.m in Sources */,
+				BCAF11EC1C3A50C90089945B /* StudentDetailModel.m in Sources */,
 				BCEA01E01C2AA0B600CB082D /* LoginViewController.m in Sources */,
 				BCEAFFCD1C2AA07800CB082D /* Child.m in Sources */,
+				BCAF11E81C3A4E2B0089945B /* StudentDetailCommentCell.m in Sources */,
 				BCEAFFDF1C2AA07800CB082D /* ThirdAccountHelper.m in Sources */,
 				BCAF118E1C3114850089945B /* ApplyTeacherModel.m in Sources */,
 				BCEAFFFC1C2AA07800CB082D /* MLSelectPhotoPickerGroup.m in Sources */,
@@ -2196,7 +2266,6 @@
 				BCEA00081C2AA07800CB082D /* MLSelectPhotoPickerFooterCollectionReusableView.m in Sources */,
 				BCEAFF7C1C2AA07800CB082D /* NSString+MOAttribuedString.m in Sources */,
 				BCEA01E21C2AA0B600CB082D /* RegisterViewController.m in Sources */,
-				BCEA01F01C2AA0B600CB082D /* MyFavCell.m in Sources */,
 				BCEA01711C2AA0B600CB082D /* ChatListViewController.m in Sources */,
 				BCEAFF741C2AA07800CB082D /* MONavigationController.m in Sources */,
 				BCEA00011C2AA07800CB082D /* MLSelectPhotoPickerViewController.m in Sources */,
@@ -2204,6 +2273,7 @@
 				BCEA022A1C2AA0B600CB082D /* SettingViewController.m in Sources */,
 				BCEAFFD21C2AA07800CB082D /* CacheService.m in Sources */,
 				BCEAFFE61C2AA07800CB082D /* CustomDarkButton.m in Sources */,
+				BC6CF5271C3B744F006F314C /* StudentRecordModel.m in Sources */,
 				BCEA01FB1C2AA0B600CB082D /* MORootViewController.m in Sources */,
 				BCEA01721C2AA0B600CB082D /* ChatLocationPickerViewController.m in Sources */,
 				BCEAFF791C2AA07800CB082D /* MBProgressHUD+Add.m in Sources */,
@@ -2213,6 +2283,7 @@
 				BCEA02291C2AA0B600CB082D /* AboutViewController.m in Sources */,
 				BCAF11891C3110E50089945B /* ApplyTeacherViewController.m in Sources */,
 				BCEA00001C2AA07800CB082D /* MLSelectPhotoPickerGroupViewController.m in Sources */,
+				BCAF11F31C3A892D0089945B /* CharacterTagsCell.m in Sources */,
 				BCEAFFD61C2AA07800CB082D /* ServerErrorHandler.m in Sources */,
 				BCEA01F21C2AA0B600CB082D /* PersonChildHeaderCell.m in Sources */,
 				BCEAFFCF1C2AA07800CB082D /* User.m in Sources */,
@@ -2236,12 +2307,13 @@
 				BCEAFDCA1C2A9A8400CB082D /* main.m in Sources */,
 				BCEAFF861C2AA07800CB082D /* UITableView+FDTemplateLayoutHeader.m in Sources */,
 				BCEAFF781C2AA07800CB082D /* MOWebViewController.m in Sources */,
-				BCAF11841C2D45490089945B /* ChildListItemCell.m in Sources */,
+				BCAF11841C2D45490089945B /* GoingStudentListItemCell.m in Sources */,
 				BCEAFFF41C2AA07800CB082D /* MJPhotoProgressView.m in Sources */,
 				BCEAFF731C2AA07800CB082D /* MOGroupStyleTableViewController.m in Sources */,
 				BCEAFFD41C2AA07800CB082D /* ConfigService.m in Sources */,
 				BCEAFFEF1C2AA07800CB082D /* MCAvatarView.m in Sources */,
 				BCEAFF761C2AA07800CB082D /* MOTableViewController.m in Sources */,
+				BCAF11EF1C3A87550089945B /* StudentAddCommentViewController.m in Sources */,
 				BCEAFFD11C2AA07800CB082D /* AccountService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

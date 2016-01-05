@@ -506,5 +506,41 @@
 		<key>desc</key>
 		<string>编辑教育经历</string>
 	</dict>
+	<key>studentlist</key>
+	<dict>
+		<key>controller</key>
+		<string>StudentListViewController</string>
+		<key>needlogin</key>
+		<true/>
+		<key>desc</key>
+		<string>学生列表</string>
+	</dict>
+	<key>studentdetail</key>
+	<dict>
+		<key>controller</key>
+		<string>StudentDetailViewController</string>
+		<key>needlogin</key>
+		<true/>
+		<key>desc</key>
+		<string>学生详情</string>
+	</dict>
+	<key>studentaddcomment</key>
+	<dict>
+		<key>controller</key>
+		<string>StudentAddCommentViewController</string>
+		<key>needlogin</key>
+		<true/>
+		<key>desc</key>
+		<string>添加学生评语</string>
+	</dict>
+	<key>studentrecord</key>
+	<dict>
+		<key>controller</key>
+		<string>StudentRecordViewController</string>
+		<key>needlogin</key>
+		<true/>
+		<key>desc</key>
+		<string>学生记录</string>
+	</dict>
 </dict>
 </plist>

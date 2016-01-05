@@ -23,6 +23,7 @@
         self.tableView.separatorStyle = [self tableViewCellSeparatorStyle];
         self.tableView.backgroundView = [[UIView alloc] init];
         self.tableView.backgroundView.backgroundColor = MO_APP_VCBackgroundColor;
+        self.tableView.tableFooterView = [UIView new];
     }
     return self;
 }
@@ -37,6 +38,7 @@
         self.tableView.separatorColor = MO_APP_SeparatorColor;
         self.tableView.backgroundColor = MO_APP_VCBackgroundColor;
         self.tableView.backgroundView = nil;
+        self.tableView.tableFooterView = [UIView new];
     }
     return self;
 }
@@ -46,7 +48,7 @@
 }
 
 - (UITableViewCellSeparatorStyle)tableViewCellSeparatorStyle {
-    return UITableViewCellSeparatorStyleNone;
+    return UITableViewCellSeparatorStyleSingleLine;
 }
 
 - (BOOL)enablePullDownToRefresh {

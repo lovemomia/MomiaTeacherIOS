@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="140" id="KGk-i7-Jjw" customClass="StudentDetailCommentCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="139.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12月20日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5b-Ef-RzF">
+                        <rect key="frame" x="10" y="10" width="300" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="薇薇老师" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0r-Hh-0CF">
+                        <rect key="frame" x="10" y="115" width="300" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="聪聪想象力丰富，思维敏捷，上课认真又积极。做完飞机模型，聪聪还问我可不可以拿回家给弟弟玩。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpV-jd-Fju">
+                        <rect key="frame" x="10" y="53" width="300" height="54"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小小飞行员" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wwy-1A-f86">
+                        <rect key="frame" x="10" y="32.5" width="300" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="A5b-Ef-RzF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="2en-nW-Jd8"/>
+                    <constraint firstAttribute="trailing" secondItem="Wwy-1A-f86" secondAttribute="trailing" constant="10" id="5DC-cL-556"/>
+                    <constraint firstItem="l0r-Hh-0CF" firstAttribute="top" secondItem="gpV-jd-Fju" secondAttribute="bottom" constant="8" id="6FW-Q7-G3n"/>
+                    <constraint firstItem="l0r-Hh-0CF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="8G4-Xw-Gie"/>
+                    <constraint firstItem="A5b-Ef-RzF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="IYu-0A-q7V"/>
+                    <constraint firstAttribute="trailing" secondItem="l0r-Hh-0CF" secondAttribute="trailing" constant="10" id="M0U-Ne-vl8"/>
+                    <constraint firstAttribute="bottom" secondItem="l0r-Hh-0CF" secondAttribute="bottom" constant="10" id="OjM-I9-Cmi"/>
+                    <constraint firstItem="Wwy-1A-f86" firstAttribute="top" secondItem="A5b-Ef-RzF" secondAttribute="bottom" constant="8" id="V6e-1o-jr9"/>
+                    <constraint firstItem="Wwy-1A-f86" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="f03-Aa-qmC"/>
+                    <constraint firstAttribute="trailing" secondItem="A5b-Ef-RzF" secondAttribute="trailing" constant="10" id="f7s-CF-6O4"/>
+                    <constraint firstItem="gpV-jd-Fju" firstAttribute="top" secondItem="Wwy-1A-f86" secondAttribute="bottom" constant="6" id="j6h-qt-w9z"/>
+                    <constraint firstAttribute="trailing" secondItem="gpV-jd-Fju" secondAttribute="trailing" constant="10" id="l9f-hl-UDt"/>
+                    <constraint firstItem="gpV-jd-Fju" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="x2F-gW-kp5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="commentLabel" destination="gpV-jd-Fju" id="zTr-Hp-Z3q"/>
+                <outlet property="courseTitleLabel" destination="Wwy-1A-f86" id="Wxu-Yg-wsA"/>
+                <outlet property="dateLabel" destination="A5b-Ef-RzF" id="grb-el-IsG"/>
+                <outlet property="teacherLabel" destination="l0r-Hh-0CF" id="kvH-Hp-P4O"/>
+            </connections>
+            <point key="canvasLocation" x="271" y="428"/>
+        </tableViewCell>
+    </objects>
+</document>

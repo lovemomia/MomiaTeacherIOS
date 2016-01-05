@@ -34,17 +34,10 @@ static NSString * identifierCourseListItemCell = @"CourseListItemCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    if (self.status == 2) {
-        self.navigationItem.title = @"待付款订单";
-    } else if (self.status == 3) {
-        self.navigationItem.title = @"已付款订单";
-    } else {
-        self.navigationItem.title = @"全部订单";
-    }
     
     [CourseListItemCell registerCellFromNibWithTableView:self.tableView withIdentifier:identifierCourseListItemCell];
     
-    self.tableView.mj_header = [MJRefreshHelper createGifHeaderWithRefreshingTarget:self refreshingAction:@selector(requestData)];
+    self.tableView.mj_header = [MJRefreshHelper createGifHeaderWithRefreshingTarget:self refreshingAction:@selector(refreshData)];
     
     self.orderList = [NSMutableArray new];
     self.nextIndex = 0;
@@ -59,7 +52,7 @@ static NSString * identifierCourseListItemCell = @"CourseListItemCell";
     
     NSString *path = self.status == 0 ? @"/teacher/course/notfinished" : @"/teacher/course/finished";
     self.curOperation = [[HttpService defaultService]GET:URL_APPEND_PATH(path)
-                                              parameters:nil cacheType:CacheTypeDisable JSONModelClass:[CourseListModel class]
+                                              parameters:@{@"start":@"0"} cacheType:CacheTypeDisable JSONModelClass:[CourseListModel class]
                                                  success:^(AFHTTPRequestOperation *operation, id responseObject) {
                                                      CourseListModel *model = (CourseListModel *)responseObject;
                                                      self.totalCount = model.data.totalCount;
@@ -143,7 +136,7 @@ static NSString * identifierCourseListItemCell = @"CourseListItemCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if(indexPath.row < self.orderList.count) {
         Course * model = self.orderList[indexPath.row];
-        [self openURL:[NSString stringWithFormat:@"orderdetail?oid=%@", model.ids]];
+        [self openURL:[NSString stringWithFormat:@"studentlist?coid=%@&sid=%@&status=%d", model.courseId, model.courseSkuId, self.status]];
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -180,6 +173,9 @@ static NSString * identifierCourseListItemCell = @"CourseListItemCell";
         
     } else {
         CourseListItemCell *itemCell = [CourseListItemCell cellWithTableView:tableView forIndexPath:indexPath withIdentifier:identifierCourseListItemCell];
+        if (self.status != 0) {
+            itemCell.showStatus = YES;
+        }
         itemCell.data = self.orderList[row];
         cell = itemCell;
     }
