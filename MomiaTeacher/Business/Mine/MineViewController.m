@@ -170,10 +170,7 @@
             titleLabel.text = account.nickName;
             
             UILabel *subTitleLabel = (UILabel *)[cell viewWithTag:3];
-            
-            if ([account getBigChild]) {
-                subTitleLabel.text = [NSString stringWithFormat:@"%@", [account ageWithDateOfBirth]];
-            }
+            subTitleLabel.text = account.mobile;
             
         } else {
             cell = [tableView dequeueReusableCellWithIdentifier:CellLogin];

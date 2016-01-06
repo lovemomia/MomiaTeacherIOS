@@ -27,6 +27,9 @@
 		BC6CF5591C3CBFDC006F314C /* IQToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6CF5491C3CBFDC006F314C /* IQToolbar.m */; };
 		BC6CF55A1C3CBFDC006F314C /* IQUIView+IQKeyboardToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6CF54B1C3CBFDC006F314C /* IQUIView+IQKeyboardToolbar.m */; };
 		BC6CF55B1C3CBFDC006F314C /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BC6CF54E1C3CBFDC006F314C /* IQKeyboardManager.bundle */; };
+		BC6CF58E1C3CC73A006F314C /* MaterialListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6CF58D1C3CC73A006F314C /* MaterialListModel.m */; };
+		BC6CF5921C3CCA68006F314C /* MaterialListItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6CF5901C3CCA68006F314C /* MaterialListItemCell.m */; };
+		BC6CF5931C3CCA68006F314C /* MaterialListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC6CF5911C3CCA68006F314C /* MaterialListItemCell.xib */; };
 		BCAF11791C2CDFBE0089945B /* CourseListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF11781C2CDFBE0089945B /* CourseListViewController.m */; };
 		BCAF117D1C2D29A20089945B /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF117C1C2D29A20089945B /* Student.m */; };
 		BCAF11801C2D2C280089945B /* CourseGoingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF117F1C2D2C280089945B /* CourseGoingModel.m */; };
@@ -365,6 +368,11 @@
 		BC6CF54B1C3CBFDC006F314C /* IQUIView+IQKeyboardToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUIView+IQKeyboardToolbar.m"; sourceTree = "<group>"; };
 		BC6CF54C1C3CBFDC006F314C /* KeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardManager.h; sourceTree = "<group>"; };
 		BC6CF54E1C3CBFDC006F314C /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
+		BC6CF58C1C3CC73A006F314C /* MaterialListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaterialListModel.h; path = Material/MaterialListModel.h; sourceTree = "<group>"; };
+		BC6CF58D1C3CC73A006F314C /* MaterialListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaterialListModel.m; path = Material/MaterialListModel.m; sourceTree = "<group>"; };
+		BC6CF58F1C3CCA68006F314C /* MaterialListItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaterialListItemCell.h; path = Material/Views/MaterialListItemCell.h; sourceTree = "<group>"; };
+		BC6CF5901C3CCA68006F314C /* MaterialListItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaterialListItemCell.m; path = Material/Views/MaterialListItemCell.m; sourceTree = "<group>"; };
+		BC6CF5911C3CCA68006F314C /* MaterialListItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MaterialListItemCell.xib; path = Material/Views/MaterialListItemCell.xib; sourceTree = "<group>"; };
 		BCAF11771C2CDFBE0089945B /* CourseListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CourseListViewController.h; path = Manager/CourseListViewController.h; sourceTree = "<group>"; };
 		BCAF11781C2CDFBE0089945B /* CourseListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CourseListViewController.m; path = Manager/CourseListViewController.m; sourceTree = "<group>"; };
 		BCAF117B1C2D29A20089945B /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Student.h; path = Manager/Student.h; sourceTree = "<group>"; };
@@ -1004,6 +1012,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		BC6CF58B1C3CC708006F314C /* Material */ = {
+			isa = PBXGroup;
+			children = (
+				BC6CF58C1C3CC73A006F314C /* MaterialListModel.h */,
+				BC6CF58D1C3CC73A006F314C /* MaterialListModel.m */,
+			);
+			name = Material;
+			sourceTree = "<group>";
+		};
 		BCAF117A1C2D296D0089945B /* Manager */ = {
 			isa = PBXGroup;
 			children = (
@@ -1384,6 +1401,9 @@
 		BCEA02A81C2B8DF700CB082D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BC6CF58F1C3CCA68006F314C /* MaterialListItemCell.h */,
+				BC6CF5901C3CCA68006F314C /* MaterialListItemCell.m */,
+				BC6CF5911C3CCA68006F314C /* MaterialListItemCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -1537,10 +1557,11 @@
 		BCEAFE301C2AA07800CB082D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BCAF118B1C31144E0089945B /* Apply */,
-				BCAF117A1C2D296D0089945B /* Manager */,
 				BCEAFE311C2AA07800CB082D /* BaseModel.h */,
 				BCEAFE321C2AA07800CB082D /* BaseModel.m */,
+				BC6CF58B1C3CC708006F314C /* Material */,
+				BCAF118B1C31144E0089945B /* Apply */,
+				BCAF117A1C2D296D0089945B /* Manager */,
 				BCEAFE331C2AA07800CB082D /* Chat */,
 				BCEAFE3C1C2AA07800CB082D /* City */,
 				BCEAFE441C2AA07800CB082D /* Course */,
@@ -2149,6 +2170,7 @@
 				BCEAFDD81C2A9A8400CB082D /* LaunchScreen.storyboard in Resources */,
 				BCAF11DE1C3A1FF30089945B /* StudentListItemCell.xib in Resources */,
 				BCEA01E31C2AA0B600CB082D /* ForgetPasswordCell.xib in Resources */,
+				BC6CF5931C3CCA68006F314C /* MaterialListItemCell.xib in Resources */,
 				BCEA025C1C2AAE8400CB082D /* Emoji.plist in Resources */,
 				BCEAFFE31C2AA07800CB082D /* CommonHeaderView.xib in Resources */,
 				BCAF11981C33892D0089945B /* ApplyTeacherAddCell.xib in Resources */,
@@ -2311,6 +2333,7 @@
 				BCEAFF9F1C2AA07800CB082D /* Subject.m in Sources */,
 				BCEAFFB81C2AA07800CB082D /* OrderPerson.m in Sources */,
 				BCEAFF9A1C2AA07800CB082D /* CourseTeacherListModel.m in Sources */,
+				BC6CF5921C3CCA68006F314C /* MaterialListItemCell.m in Sources */,
 				BCAF11971C33892D0089945B /* ApplyTeacherAddCell.m in Sources */,
 				BCEAFF851C2AA07800CB082D /* UILabel+ContentSize.m in Sources */,
 				BCEAFFF61C2AA07800CB082D /* MJPhotoView.m in Sources */,
@@ -2360,6 +2383,7 @@
 				BC6CF5231C3B6E15006F314C /* ContentInputCell.m in Sources */,
 				BCEAFFFB1C2AA07800CB082D /* MLSelectPhotoPickerDatas.m in Sources */,
 				BCEAFF7A1C2AA07800CB082D /* NSDate+Age.m in Sources */,
+				BC6CF58E1C3CC73A006F314C /* MaterialListModel.m in Sources */,
 				BCEAFFBB1C2AA07800CB082D /* PostPersonModel.m in Sources */,
 				BCEA01781C2AA0B600CB082D /* ChatUserFeedPhotoCell.m in Sources */,
 				BCEA000E1C2AA07800CB082D /* MOStepperGroup.m in Sources */,
@@ -2618,7 +2642,7 @@
 					"$(PROJECT_DIR)/MomiaTeacher/ThirdParty/Rong_Cloud_iOS_SDK_v2_4_0_stable",
 					"$(PROJECT_DIR)/MomiaTeacher/ThirdParty/WeChatSDK_1.6",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.youxing.MomiaTeacher;
+				PRODUCT_BUNDLE_IDENTIFIER = com.youxing.SogoTeacher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -2647,7 +2671,7 @@
 					"$(PROJECT_DIR)/MomiaTeacher/ThirdParty/Rong_Cloud_iOS_SDK_v2_4_0_stable",
 					"$(PROJECT_DIR)/MomiaTeacher/ThirdParty/WeChatSDK_1.6",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.youxing.MomiaTeacher;
+				PRODUCT_BUNDLE_IDENTIFIER = com.youxing.SogoTeacher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

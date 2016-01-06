@@ -32,7 +32,7 @@
         self.httpClient = [AFHTTPRequestOperationManager manager];
         
         self.httpClient.requestSerializer = [AFJSONRequestSerializer serializer];
-        [self.httpClient.requestSerializer setValue:@"API1.0(com.youxing.DuoLa;iOS)" forHTTPHeaderField:@"User-Agent"];
+        [self.httpClient.requestSerializer setValue:@"API1.0(com.youxing.SogoTeacher;iOS)" forHTTPHeaderField:@"User-Agent"];
     }
     return self;
 }

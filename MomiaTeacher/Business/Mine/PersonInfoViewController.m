@@ -148,11 +148,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    Account *account = [AccountService defaultService].account;
-    if ([account.children count] == 0) {
-        return 3;
-    }
-    return 2 + [account.children count];
+//    Account *account = [AccountService defaultService].account;
+//    if ([account.children count] == 0) {
+//        return 3;
+//    }
+//    return 2 + [account.children count];
+    return 2;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
@@ -197,7 +198,7 @@
         button.width = 280;
         button.left = (SCREEN_WIDTH - button.width) / 2;
         button.top = 30;
-        [button setTitle:@"退出登录" forState:UIControlStateNormal];
+        [button setTitle:@"切换账户" forState:UIControlStateNormal];
         [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [button addTarget:self action:@selector(onLogoutClicked:) forControlEvents:UIControlEventTouchUpInside];
         [button setBackgroundImage:[UIImage imageNamed:@"BgLargeButtonNormal"] forState:UIControlStateNormal];
@@ -353,7 +354,7 @@
 
 
 - (void)onLogoutClicked:(id)sender {
-    UIAlertView *alter = [[UIAlertView alloc] initWithTitle:nil message:@"确定退出吗？" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+    UIAlertView *alter = [[UIAlertView alloc] initWithTitle:nil message:@"确定要切换账户吗？" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
     alter.tag = 1001;
     [alter show];
 }
@@ -512,7 +513,9 @@
 {
     if (alertView.tag == 1001 && buttonIndex == 1) {
         // logout
-        [[AccountService defaultService] logout:self];
+        [[AccountService defaultService] login:self success:^{
+            [self.navigationController popToRootViewControllerAnimated:YES];
+        }];
         return;
     }
     if (alertView.tag == 0) {

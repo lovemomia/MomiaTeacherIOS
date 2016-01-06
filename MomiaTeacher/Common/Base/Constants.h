@@ -121,9 +121,9 @@
 #define kWechatAppKey_QA      @"wxcf7b15b51d3b4e53" //哆啦亲子
 
 // umeng
-#define kUMengAppKey          @"5680b49767e58ec0750007d2"
+#define kUMengAppKey          @"568cccd567e58e71d3002d11"
 
 // rong cloud
 #define kRCIMAppKey          @"e5t4ouvptfowa"
-#define kRCIMAppKey_QA       @"25wehl3uwotvw" //测试环境
+#define kRCIMAppKey_QA       @"0vnjpoadnwp2z" //测试环境
 

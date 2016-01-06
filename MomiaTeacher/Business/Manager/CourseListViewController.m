@@ -11,7 +11,7 @@
 #import "CourseListModel.h"
 #import "MJRefreshHelper.h"
 
-static NSString * identifierCourseListItemCell = @"CourseListItemCell";
+static NSString * identifierMaterialListItemCell = @"CourseListItemCell";
 
 @interface CourseListViewController ()
 @property (nonatomic, assign) NSInteger status;
@@ -35,7 +35,7 @@ static NSString * identifierCourseListItemCell = @"CourseListItemCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [CourseListItemCell registerCellFromNibWithTableView:self.tableView withIdentifier:identifierCourseListItemCell];
+    [CourseListItemCell registerCellFromNibWithTableView:self.tableView withIdentifier:identifierMaterialListItemCell];
     
     self.tableView.mj_header = [MJRefreshHelper createGifHeaderWithRefreshingTarget:self refreshingAction:@selector(refreshData)];
     
@@ -54,6 +54,7 @@ static NSString * identifierCourseListItemCell = @"CourseListItemCell";
     self.curOperation = [[HttpService defaultService]GET:URL_APPEND_PATH(path)
                                               parameters:@{@"start":@"0"} cacheType:CacheTypeDisable JSONModelClass:[CourseListModel class]
                                                  success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                                                     [self.tableView.mj_header endRefreshing];
                                                      CourseListModel *model = (CourseListModel *)responseObject;
                                                      self.totalCount = model.data.totalCount;
                                                      self.nextIndex = model.data.nextIndex;
@@ -69,7 +70,6 @@ static NSString * identifierCourseListItemCell = @"CourseListItemCell";
                                                      }
                                                      [self.tableView reloadData];
                                                      self.isLoading = NO;
-                                                     [self.tableView.mj_header endRefreshing];
                                                  }
                          
                                                  failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -172,7 +172,7 @@ static NSString * identifierCourseListItemCell = @"CourseListItemCell";
         }
         
     } else {
-        CourseListItemCell *itemCell = [CourseListItemCell cellWithTableView:tableView forIndexPath:indexPath withIdentifier:identifierCourseListItemCell];
+        CourseListItemCell *itemCell = [CourseListItemCell cellWithTableView:tableView forIndexPath:indexPath withIdentifier:identifierMaterialListItemCell];
         if (self.status != 0) {
             itemCell.showStatus = YES;
         }
