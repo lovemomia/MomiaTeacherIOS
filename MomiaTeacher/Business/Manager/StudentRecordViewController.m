@@ -13,6 +13,8 @@
 #import "CharacterTagsCell.h"
 #import "ContentInputCell.h"
 
+#define MAX_LIMIT_NUMS     300 //最大输入只能300个字符
+
 static NSString * identifierStudentListItemCell = @"StudentListItemCell";
 static NSString * identifierCharacterTagsCell = @"CharacterTagsCell";
 static NSString * identifierContentInputCell = @"ContentInputCell";
@@ -108,6 +110,7 @@ static NSString * identifierContentInputCell = @"ContentInputCell";
         
     } else if (indexPath.section == 1) {
         CharacterTagsCell *tagsCell = [CharacterTagsCell cellWithTableView:tableView forIndexPath:indexPath withIdentifier:identifierCharacterTagsCell];
+        tagsCell.selectAble = YES;
         tagsCell.delegate = self;
         tagsCell.data = self.model;
         cell = tagsCell;
@@ -198,7 +201,7 @@ static NSString * identifierContentInputCell = @"ContentInputCell";
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
 {
     NSString *comcatstr = [textView.text stringByReplacingCharactersInRange:range withString:text];
-    NSInteger caninputlen = 300 - comcatstr.length;
+    NSInteger caninputlen = MAX_LIMIT_NUMS - comcatstr.length;
     if (caninputlen >= 0) {
         return YES;
     }
@@ -222,16 +225,16 @@ static NSString * identifierContentInputCell = @"ContentInputCell";
     NSString  *nsTextContent = textView.text;
     NSInteger existTextNum = nsTextContent.length;
     
-    if (existTextNum > 300)
+    if (existTextNum > MAX_LIMIT_NUMS)
     {
         //截取到最大位置的字符
-        NSString *s = [nsTextContent substringToIndex:300];
+        NSString *s = [nsTextContent substringToIndex:MAX_LIMIT_NUMS];
         
         [textView setText:s];
     }
     self.model.data.content = textView.text;
     //不让显示负数
-    self.countLabel.text = [NSString stringWithFormat:@"%ld/%d",MAX(0, 300 - existTextNum), 300];
+    self.countLabel.text = [NSString stringWithFormat:@"%ld/%d",MAX(0, MAX_LIMIT_NUMS - existTextNum), MAX_LIMIT_NUMS];
 }
 
 @end

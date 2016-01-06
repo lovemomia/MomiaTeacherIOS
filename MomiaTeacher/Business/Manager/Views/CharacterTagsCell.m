@@ -40,6 +40,10 @@
     
     for (int i = 0; i < self.tags.count; i++) {
         StudentRecordTag *tag = self.tags[i];
+        if (!self.selectAble && ![tag.selected boolValue]) {
+            continue;
+        }
+        
         UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(x, y, 30, kLabelHeight)];
         label.textAlignment = NSTextAlignmentCenter;
         label.layer.borderColor = UIColorFromRGB(0xdddddd).CGColor;
@@ -68,10 +72,12 @@
             y = y + kLabelHeight + kLabelPadding;
         }
         
-        UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
-        label.tag = i;
-        label.userInteractionEnabled = YES;
-        [label addGestureRecognizer:singleTap];
+        if (self.selectAble) {
+            UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
+            label.tag = i;
+            label.userInteractionEnabled = YES;
+            [label addGestureRecognizer:singleTap];
+        }
         
         [self.tagsContainer addSubview:label];
     }

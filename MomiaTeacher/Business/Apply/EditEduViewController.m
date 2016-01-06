@@ -177,7 +177,7 @@ static NSString *identifierEditExpLineInputCell = @"EditExpLineInputCell";
         } else if (indexPath.row == 2) {
             inputField.tag = 1003;
             inputField.placeholder = @"学历";
-            inputField.text = self.major;
+            inputField.text = self.level;
         }
         [inputField addTarget:self action:@selector(textFieldWithText:) forControlEvents:UIControlEventEditingChanged];
         cell = lineCell;

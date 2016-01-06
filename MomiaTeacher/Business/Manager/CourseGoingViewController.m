@@ -49,10 +49,8 @@ static NSString * identifierGoingStudentListItemCell = @"GoingStudentListItemCel
         self.model = responseObject;
         if (self.model.data.course == nil) {
             [self.view showEmptyView:@"课程还没有开始哦～"];
-            
-        } else {
-            [self.tableView reloadData];
         }
+        [self.tableView reloadData];
         [self.tableView.mj_header endRefreshing];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -112,7 +110,7 @@ static NSString * identifierGoingStudentListItemCell = @"GoingStudentListItemCel
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    if (self.model) {
+    if (self.model.data.course) {
         return 1;
     }
     return 0;

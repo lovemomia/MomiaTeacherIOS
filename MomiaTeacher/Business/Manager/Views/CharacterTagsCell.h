@@ -19,6 +19,7 @@
 
 @property (weak, nonatomic) IBOutlet UIView *tagsContainer;
 
+@property (nonatomic, assign) BOOL selectAble;
 @property (nonatomic, assign) id<CharacterTagsCellDelegate> delegate;
 
 @end

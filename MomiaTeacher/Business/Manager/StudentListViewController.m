@@ -96,7 +96,12 @@ static NSString * identifierStudentListItemCell = @"StudentListItemCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if(indexPath.row < self.studentList.count) {
         Student * model = self.studentList[indexPath.row];
-        [self openURL:[NSString stringWithFormat:@"studentdetail?id=%@", model.ids]];
+        if (self.status != 0 && ![model.commented boolValue]) {
+            [self openURL:[NSString stringWithFormat:@"studentaddcomment?coid=%@&sid=%@&cid=%@", self.coid, self.sid, model.ids]];
+            
+        } else {
+            [self openURL:[NSString stringWithFormat:@"studentdetail?id=%@", model.ids]];
+        }
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
