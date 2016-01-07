@@ -19,7 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    self.navigationItem.title = @"群组";
+    self.navigationItem.title = @"学生群组";
     
     ChatListViewController *chatListVC = [[ChatListViewController alloc]initWithParams:nil];
     [self addChildViewController:chatListVC];

@@ -24,6 +24,10 @@ static NSString * identifierGoingStudentListItemCell = @"GoingStudentListItemCel
 
 @implementation CourseGoingViewController
 
+- (BOOL)isNavDarkStyle {
+    return true;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
