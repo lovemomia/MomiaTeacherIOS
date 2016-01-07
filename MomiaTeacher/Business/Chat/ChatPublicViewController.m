@@ -35,7 +35,7 @@
     [self scrollToBottomAnimated:NO];
     
     if (self.conversationDataRepository.count == 0) {
-        [self.view showEmptyView:@"暂时没有未读通知哦～"];
+        [self.view showEmptyView:@"还没有系统消息哦～"];
     }
 }
 
