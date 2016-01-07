@@ -48,6 +48,21 @@ static NSString * identifierMaterialListItemCell = @"CourseListItemCell";
     [self requestData];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onStudentListDataChanged:) name:@"onStudentAddCommentFinished" object:nil];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"onStudentAddCommentFinished" object:nil];
+}
+
+- (void)onStudentListDataChanged:(NSNotification*)notify {
+    [self refreshData];
+}
 
 - (void)refreshData {
     if(self.curOperation) {

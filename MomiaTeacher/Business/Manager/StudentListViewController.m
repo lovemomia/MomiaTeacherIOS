@@ -47,6 +47,22 @@ static NSString * identifierStudentListItemCell = @"StudentListItemCell";
     [self requestData];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onStudentListDataChanged:) name:@"onStudentAddCommentFinished" object:nil];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"onStudentAddCommentFinished" object:nil];
+}
+
+- (void)onStudentListDataChanged:(NSNotification*)notify {
+    [self requestData];
+}
+
 - (void)requestData {
     if(self.curOperation) {
         [self.curOperation pause];

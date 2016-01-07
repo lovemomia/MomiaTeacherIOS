@@ -211,6 +211,7 @@ static NSString * identifierStudentRecordContentCell = @"StudentRecordContentCel
                               success:^(AFHTTPRequestOperation *operation, id responseObject) {
                                   [self.view removeLoadingBee];
                                   [self.navigationController popViewControllerAnimated:YES];
+                                  [[NSNotificationCenter defaultCenter]postNotificationName:@"onStudentAddCommentFinished" object:nil];
                               }
      
                               failure:^(AFHTTPRequestOperation *operation, NSError *error) {
