@@ -13,17 +13,25 @@
 
 #import "ApplyTeacherInputCell.h"
 #import "ApplyTeacherAddCell.h"
+#import "CommonHeaderView.h"
+#import "ApplyTeacherExpCell.h"
 
 #import "EditExpViewController.h"
 #import "EditEduViewController.h"
 
 static NSString *identifierApplyTeacherInputCell = @"ApplyTeacherInputCell";
 static NSString *identifierApplyTeacherAddCell = @"ApplyTeacherAddCell";
+static NSString *identifierApplyTeacherExpCell = @"ApplyTeacherExpCell";
+static NSString *applySuccessMsg = @"恭喜您！通过助教资格审核，您可以在课程管理中查看课程安排啦~";
 
 @interface ApplyTeacherViewController ()<UIAlertViewDelegate, DatePickerSheetDelegate, EditExpDelegate, EditEduDelegate>
-@property (nonatomic, strong) ApplyTeacherModel *model;
+
 @property (nonatomic, assign) BOOL fromLogin;
 @property (nonatomic, strong) UIImage *picThumb;
+
+@property (nonatomic, strong) ApplyTeacherModel *model;
+@property (nonatomic, assign) BOOL isApplySuccess; // 是否申请成功
+
 @end
 
 @implementation ApplyTeacherViewController
@@ -46,6 +54,8 @@ static NSString *identifierApplyTeacherAddCell = @"ApplyTeacherAddCell";
     
     [ApplyTeacherInputCell registerCellFromNibWithTableView:self.tableView withIdentifier:identifierApplyTeacherInputCell];
     [ApplyTeacherAddCell registerCellFromNibWithTableView:self.tableView withIdentifier:identifierApplyTeacherAddCell];
+    [CommonHeaderView registerCellFromNibWithTableView:self.tableView];
+    [ApplyTeacherExpCell registerCellFromNibWithTableView:self.tableView withIdentifier:identifierApplyTeacherExpCell];
     
     [self requestData];
 }
@@ -62,7 +72,11 @@ static NSString *identifierApplyTeacherAddCell = @"ApplyTeacherAddCell";
         self.model = responseObject;
         int status = [self.model.data.status intValue];
         if (status == 1) {
-            [self.view showEmptyView:@"恭喜您！通过助教资格审核，您可以在课程管理中查看课程安排啦~"];
+            self.isApplySuccess = YES;
+            [self.tableView reloadData];
+            self.navigationItem.title = @"助教信息";
+//            [self.view showEmptyView:@"恭喜您！通过助教资格审核，您可以在课程管理中查看课程安排啦~"];
+            
         } else if (status == 3) {
             [self.view showEmptyView:@"您的申请已经提交，正在审核中，请耐心等待1~2个工作日哦~"];
         } else {
@@ -375,6 +389,10 @@ static NSString *identifierApplyTeacherAddCell = @"ApplyTeacherAddCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    if (self.isApplySuccess) {
+        return;
+    }
+    
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
             [self takePictureClick];
@@ -406,7 +424,7 @@ static NSString *identifierApplyTeacherAddCell = @"ApplyTeacherAddCell";
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     if (self.model) {
         int status = [self.model.data.status intValue];
-        if (status == 0 || status == 2 || status == 4) {
+        if (status == 0 || status == 1 || status == 2 || status == 4) {
             return 3;
         }
     }
@@ -417,7 +435,14 @@ static NSString *identifierApplyTeacherAddCell = @"ApplyTeacherAddCell";
     if (section == 0) {
         return 6;
     } else if (section == 1) {
+        if (self.isApplySuccess) {
+            return self.model.data.experiences.count;
+        }
         return 1 + self.model.data.experiences.count;
+    }
+    
+    if (self.isApplySuccess) {
+        return self.model.data.educations.count;
     }
     return 1 + self.model.data.educations.count;
 }
@@ -428,6 +453,9 @@ static NSString *identifierApplyTeacherAddCell = @"ApplyTeacherAddCell";
     if (section == 0 && row == 0) {
         return 70;
     }
+    if (self.isApplySuccess && (section == 1 || section == 2)) {
+        return [ApplyTeacherExpCell heightWithTableView:tableView withIdentifier:identifierApplyTeacherExpCell forIndexPath:indexPath data:nil];
+    }
     return 44;
 }
 
@@ -437,60 +465,70 @@ static NSString *identifierApplyTeacherAddCell = @"ApplyTeacherAddCell";
     static NSString *CellDefault = @"DefaultCell";
     static NSString *CellLogo = @"LogoCell";
     UITableViewCell *cell;
-    if ((section == 0) && row == 0) {
-        cell = [tableView dequeueReusableCellWithIdentifier:CellLogo];
-        if (cell == nil) {
-            NSArray *arr = [[NSBundle mainBundle] loadNibNamed:@"ApplyTeacherPicCell" owner:self options:nil];
-            cell = [arr objectAtIndex:0];
-            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        }
-        UIImageView *avatarIv = (UIImageView *)[cell viewWithTag:1];
-        UILabel *titleLabel = (UILabel *)[cell viewWithTag:2];
-        titleLabel.text = @"生活照";
-        if ([self.model.data.pic containsString:@"http"]) {
-            [avatarIv sd_setImageWithURL:[NSURL URLWithString:self.model.data.pic]];
-        } else if (self.picThumb) {
-            avatarIv.image = self.picThumb;
-        }
-        
-    } else if (section == 0 && (row == 1 || row == 2 || row == 5)) {
-        ApplyTeacherInputCell *inputCell = [ApplyTeacherInputCell cellWithTableView:tableView forIndexPath:indexPath withIdentifier:identifierApplyTeacherInputCell];
-        UITextField *textField = inputCell.inputTextField;
-        if (row == 1) {
-            textField.tag = 1001;
-            textField.placeholder = @"请输入您的真实姓名";
-            textField.text = self.model.data.name;
-            inputCell.titleLabel.text = @"真实姓名";
+    if (section == 0) {
+        if (row == 0) {
+            cell = [tableView dequeueReusableCellWithIdentifier:CellLogo];
+            if (cell == nil) {
+                NSArray *arr = [[NSBundle mainBundle] loadNibNamed:@"ApplyTeacherPicCell" owner:self options:nil];
+                if (self.isApplySuccess) {
+                    cell = [arr objectAtIndex:1];
+                } else {
+                    cell = [arr objectAtIndex:0];
+                }
+                cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            }
+            UIImageView *avatarIv = (UIImageView *)[cell viewWithTag:1];
             
-        } else if (row == 2) {
-            textField.tag = 1002;
-            textField.placeholder = @"请输入您的身份证号";
-            textField.text = self.model.data.idNo;
-            inputCell.titleLabel.text = @"身份证号";
+            UILabel *titleLabel = (UILabel *)[cell viewWithTag:2];
+            titleLabel.text = @"生活照";
+            if ([self.model.data.pic containsString:@"http"]) {
+                [avatarIv sd_setImageWithURL:[NSURL URLWithString:self.model.data.pic]];
+            } else if (self.picThumb) {
+                avatarIv.image = self.picThumb;
+            }
             
-        } else if (row == 5) {
-            textField.tag = 1003;
-            textField.placeholder = @"请输入您的现居地址";
-            textField.text = self.model.data.address;
-            inputCell.titleLabel.text = @"住址";
-        }
-        [textField addTarget:self action:@selector(textFieldWithText:) forControlEvents:UIControlEventEditingChanged];
-        
-        cell = inputCell;
-        
-    } else if ((section == 0 && (row == 3 || row == 4)) || (section == 1 && row < self.model.data.experiences.count) || (section == 2 && row < self.model.data.educations.count)) {
-        cell = [tableView dequeueReusableCellWithIdentifier:CellDefault];
-        if (cell == nil) {
-            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellDefault];
-            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        }
-        
-        cell.textLabel.textColor = UIColorFromRGB(0x333333);
-        cell.textLabel.font = [UIFont systemFontOfSize: 15.0];
-        cell.detailTextLabel.textColor = UIColorFromRGB(0x333333);
-        cell.detailTextLabel.font = [UIFont systemFontOfSize: 14.0];
-        
-        if (section == 0) {
+        } else if (row == 1 || row == 2 || row == 5) {
+            ApplyTeacherInputCell *inputCell = [ApplyTeacherInputCell cellWithTableView:tableView forIndexPath:indexPath withIdentifier:identifierApplyTeacherInputCell];
+            UITextField *textField = inputCell.inputTextField;
+            if (row == 1) {
+                textField.tag = 1001;
+                textField.placeholder = @"请输入您的真实姓名";
+                textField.text = self.model.data.name;
+                inputCell.titleLabel.text = @"真实姓名";
+                
+            } else if (row == 2) {
+                textField.tag = 1002;
+                textField.placeholder = @"请输入您的身份证号";
+                textField.text = self.model.data.idNo;
+                inputCell.titleLabel.text = @"身份证号";
+                
+            } else if (row == 5) {
+                textField.tag = 1003;
+                textField.placeholder = @"请输入您的现居地址";
+                textField.text = self.model.data.address;
+                inputCell.titleLabel.text = @"住址";
+            }
+            
+            if (self.isApplySuccess) {
+                textField.enabled = NO;
+            } else {
+                [textField addTarget:self action:@selector(textFieldWithText:) forControlEvents:UIControlEventEditingChanged];
+            }
+            
+            cell = inputCell;
+            
+        } else {
+            cell = [tableView dequeueReusableCellWithIdentifier:CellDefault];
+            if (cell == nil) {
+                cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellDefault];
+                cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            }
+            
+            cell.textLabel.textColor = UIColorFromRGB(0x333333);
+            cell.textLabel.font = [UIFont systemFontOfSize: 15.0];
+            cell.detailTextLabel.textColor = UIColorFromRGB(0x333333);
+            cell.detailTextLabel.font = [UIFont systemFontOfSize: 14.0];
+            
             if (row == 3) {
                 cell.textLabel.text = @"性别";
                 cell.detailTextLabel.text = self.model.data.sex;
@@ -498,16 +536,49 @@ static NSString *identifierApplyTeacherAddCell = @"ApplyTeacherAddCell";
                 cell.textLabel.text = @"生日";
                 cell.detailTextLabel.text = self.model.data.birthday;
             }
-            
-        } else if (section == 1) {
-            Experience *experience = self.model.data.experiences[row];
-            cell.textLabel.text = experience.school;
-            cell.detailTextLabel.text = experience.time;
+        }
+        
+        
+    } else if ((section == 1 && row < self.model.data.experiences.count) || (section == 2 && row < self.model.data.educations.count)) {
+        if (self.isApplySuccess) {
+            ApplyTeacherExpCell *expCell = [ApplyTeacherExpCell cellWithTableView:tableView forIndexPath:indexPath withIdentifier:identifierApplyTeacherExpCell];
+            if (section == 1) {
+                Experience *experience = self.model.data.experiences[row];
+                expCell.data = experience;
+                
+            } else {
+                Education *education = self.model.data.educations[row];
+                expCell.data = education;
+            }
+            cell = expCell;
             
         } else {
-            Education *education = self.model.data.educations[row];
-            cell.textLabel.text = education.school;
-            cell.detailTextLabel.text = education.time;
+            cell = [tableView dequeueReusableCellWithIdentifier:CellDefault];
+            if (cell == nil) {
+                if (self.isApplySuccess) {
+                    cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellDefault];
+                } else {
+                    cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellDefault];
+                }
+                
+                cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            }
+            
+            cell.textLabel.textColor = UIColorFromRGB(0x333333);
+            cell.textLabel.font = [UIFont systemFontOfSize: 15.0];
+            cell.detailTextLabel.textColor = UIColorFromRGB(0x333333);
+            cell.detailTextLabel.font = [UIFont systemFontOfSize: 14.0];
+            
+            if (section == 1) {
+                Experience *experience = self.model.data.experiences[row];
+                cell.textLabel.text = experience.school;
+                cell.detailTextLabel.text = experience.time;
+                
+            } else {
+                Education *education = self.model.data.educations[row];
+                cell.textLabel.text = education.school;
+                cell.detailTextLabel.text = education.time;
+            }
         }
         
     } else {
@@ -519,12 +590,35 @@ static NSString *identifierApplyTeacherAddCell = @"ApplyTeacherAddCell";
         }
         cell = addCell;
     }
+    
+    if (self.isApplySuccess) {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    if (self.isApplySuccess && section == 0) {
+        return 50;
+    }
+    return 10;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    if (self.isApplySuccess && section == 0) {
+        CommonHeaderView * header = [CommonHeaderView cellWithTableView:self.tableView];
+        header.data = applySuccessMsg;
+        return header;
+    }
+    return nil;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     UIView *view = [UIView new];
-    if (section == [self numberOfSectionsInTableView:tableView] - 1) {
+    if (!self.isApplySuccess && section == [self numberOfSectionsInTableView:tableView] - 1) {
         UIButton *button = [[UIButton alloc]init];
         button.height = 40;
         button.width = 280;
@@ -542,7 +636,7 @@ static NSString *identifierApplyTeacherAddCell = @"ApplyTeacherAddCell";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    if (section == [self numberOfSectionsInTableView:tableView] - 1) {
+    if (!self.isApplySuccess && section == [self numberOfSectionsInTableView:tableView] - 1) {
         return 80;
     }
     return 0.1;
