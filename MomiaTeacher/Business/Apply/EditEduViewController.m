@@ -138,14 +138,29 @@ static NSString *identifierEditExpLineInputCell = @"EditExpLineInputCell";
 #pragma mark ZhpickVIewDelegate
 
 -(void)toolbarDonBtnHaveClick:(ActionSheetPickView *)pickView resultString:(NSString *)resultString{
-    self.time = resultString;
+    if (pickView.tag == 1) {
+        self.level = resultString;
+    } else {
+        self.time = resultString;
+    }
+    
     [self.tableView reloadData];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == 3) {
-        ActionSheetPickView *pickview=[[ActionSheetPickView alloc] initPickviewWithPlistName:@"date" isHaveNavControler:NO];
+    if (indexPath.row == 2) {
+        ActionSheetPickView *pickview=[[ActionSheetPickView alloc] initPickviewWithPlistName:@"level" isHaveNavControler:NO];
+        pickview.title = @"学历";
         pickview.delegate = self;
+        pickview.tag = 1;
+        
+        [pickview show];
+        
+    } else if (indexPath.row == 3) {
+        ActionSheetPickView *pickview=[[ActionSheetPickView alloc] initPickviewWithPlistName:@"date" isHaveNavControler:NO];
+        pickview.title = @"时间段";
+        pickview.delegate = self;
+        pickview.tag = 2;
         
         [pickview show];
     }
@@ -161,7 +176,7 @@ static NSString *identifierEditExpLineInputCell = @"EditExpLineInputCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell;
-    if (indexPath.row < 3) {
+    if (indexPath.row < 2) {
         EditExpLineInputCell *lineCell = [EditExpLineInputCell cellWithTableView:tableView forIndexPath:indexPath withIdentifier:identifierEditExpLineInputCell];
         UITextField *inputField = lineCell.inputTextFiled;
         if (indexPath.row == 0) {
@@ -174,10 +189,6 @@ static NSString *identifierEditExpLineInputCell = @"EditExpLineInputCell";
             inputField.placeholder = @"专业";
             inputField.text = self.major;
             
-        } else if (indexPath.row == 2) {
-            inputField.tag = 1003;
-            inputField.placeholder = @"学历";
-            inputField.text = self.level;
         }
         [inputField addTarget:self action:@selector(textFieldWithText:) forControlEvents:UIControlEventEditingChanged];
         cell = lineCell;
@@ -189,13 +200,25 @@ static NSString *identifierEditExpLineInputCell = @"EditExpLineInputCell";
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         }
         
-        if (self.time) {
-            cell.textLabel.textColor = UIColorFromRGB(0x333333);
-            cell.textLabel.text = self.time;
+        if (indexPath.row == 2) {
+            if (self.level) {
+                cell.textLabel.textColor = UIColorFromRGB(0x333333);
+                cell.textLabel.text = self.level;
+            } else {
+                cell.textLabel.textColor = UIColorFromRGB(0x999999);
+                cell.textLabel.text = @"学历";
+            }
+            
         } else {
-            cell.textLabel.textColor = UIColorFromRGB(0x999999);
-            cell.textLabel.text = @"在校时间";
+            if (self.time) {
+                cell.textLabel.textColor = UIColorFromRGB(0x333333);
+                cell.textLabel.text = self.time;
+            } else {
+                cell.textLabel.textColor = UIColorFromRGB(0x999999);
+                cell.textLabel.text = @"在校时间";
+            }
         }
+        
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.textLabel.font = [UIFont systemFontOfSize: 14.0];
     }

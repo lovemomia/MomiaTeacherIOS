@@ -149,6 +149,7 @@ static NSString *identifierEditExpContentInputCell = @"EditExpContentInputCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0 && indexPath.row == 2) {
         ActionSheetPickView *pickview=[[ActionSheetPickView alloc] initPickviewWithPlistName:@"date" isHaveNavControler:NO];
+        pickview.title = @"时间段";
         pickview.delegate = self;
         
         [pickview show];

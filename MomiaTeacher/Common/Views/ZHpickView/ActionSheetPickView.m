@@ -155,6 +155,9 @@
     _pickerViewContainer = [arr objectAtIndex:0];
     _pickerViewContainer.frame = CGRectMake(0, SCREEN_HEIGHT - kPickViewHeight, SCREEN_WIDTH, kPickViewHeight);
     
+    UILabel *titleLabel = [_pickerViewContainer viewWithTag:1000];
+    titleLabel.text = self.title;
+    
     UIPickerView *pickView = [_pickerViewContainer viewWithTag:1003];
     pickView.delegate = self;
     pickView.dataSource = self;
@@ -418,7 +421,9 @@
 
 - (void)doneClick {
     if (_pickerViewContainer) {
-        if (_isLevelString) {
+        if (_resultString) {
+            
+        } else if (_isLevelString) {
             _resultString=[NSString stringWithFormat:@"%@",_plistArray[0]];
             
         } else if (_isLevelArray) {

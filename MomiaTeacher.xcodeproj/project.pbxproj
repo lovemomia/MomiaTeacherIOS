@@ -32,6 +32,7 @@
 		BC6CF5931C3CCA68006F314C /* MaterialListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC6CF5911C3CCA68006F314C /* MaterialListItemCell.xib */; };
 		BC6CF5B31C3E173A006F314C /* ApplyTeacherExpCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6CF5B11C3E173A006F314C /* ApplyTeacherExpCell.m */; };
 		BC6CF5B41C3E173A006F314C /* ApplyTeacherExpCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC6CF5B21C3E173A006F314C /* ApplyTeacherExpCell.xib */; };
+		BC937BBD1C3FAB9C0062EC28 /* level.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC937BBC1C3FAB9C0062EC28 /* level.plist */; };
 		BCAF11791C2CDFBE0089945B /* CourseListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF11781C2CDFBE0089945B /* CourseListViewController.m */; };
 		BCAF117D1C2D29A20089945B /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF117C1C2D29A20089945B /* Student.m */; };
 		BCAF11801C2D2C280089945B /* CourseGoingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF117F1C2D2C280089945B /* CourseGoingModel.m */; };
@@ -378,6 +379,7 @@
 		BC6CF5B01C3E173A006F314C /* ApplyTeacherExpCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ApplyTeacherExpCell.h; path = Apply/Views/ApplyTeacherExpCell.h; sourceTree = "<group>"; };
 		BC6CF5B11C3E173A006F314C /* ApplyTeacherExpCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ApplyTeacherExpCell.m; path = Apply/Views/ApplyTeacherExpCell.m; sourceTree = "<group>"; };
 		BC6CF5B21C3E173A006F314C /* ApplyTeacherExpCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ApplyTeacherExpCell.xib; path = Apply/Views/ApplyTeacherExpCell.xib; sourceTree = "<group>"; };
+		BC937BBC1C3FAB9C0062EC28 /* level.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level.plist; sourceTree = "<group>"; };
 		BCAF11771C2CDFBE0089945B /* CourseListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CourseListViewController.h; path = Manager/CourseListViewController.h; sourceTree = "<group>"; };
 		BCAF11781C2CDFBE0089945B /* CourseListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CourseListViewController.m; path = Manager/CourseListViewController.m; sourceTree = "<group>"; };
 		BCAF117B1C2D29A20089945B /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Student.h; path = Manager/Student.h; sourceTree = "<group>"; };
@@ -1060,6 +1062,7 @@
 				BCAF11BB1C33CA420089945B /* EditEduViewController.h */,
 				BCAF11BC1C33CA420089945B /* EditEduViewController.m */,
 				BCAF11D21C34C5660089945B /* date.plist */,
+				BC937BBC1C3FAB9C0062EC28 /* level.plist */,
 			);
 			name = Apply;
 			sourceTree = "<group>";
@@ -2182,6 +2185,7 @@
 				BCEA025C1C2AAE8400CB082D /* Emoji.plist in Resources */,
 				BCEAFFE31C2AA07800CB082D /* CommonHeaderView.xib in Resources */,
 				BCAF11981C33892D0089945B /* ApplyTeacherAddCell.xib in Resources */,
+				BC937BBD1C3FAB9C0062EC28 /* level.plist in Resources */,
 				BCEAFFF11C2AA07800CB082D /* MJPhotoBrowser.bundle in Resources */,
 				BCAF11C71C33CEA50089945B /* EditExpContentInputCell.xib in Resources */,
 				BCEA019B1C2AA0B600CB082D /* CourseListItemCell.xib in Resources */,

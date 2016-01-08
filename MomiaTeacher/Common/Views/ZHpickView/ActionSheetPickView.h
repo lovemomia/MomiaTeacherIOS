@@ -19,6 +19,8 @@
 
 @interface ActionSheetPickView : UIView
 
+@property(nonatomic, strong) NSString *title;
+
 @property(nonatomic,weak) id<ActionSheetPickViewDelegate> delegate;
 
 /**
