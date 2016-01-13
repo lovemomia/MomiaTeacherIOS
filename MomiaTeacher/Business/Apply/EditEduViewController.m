@@ -9,7 +9,7 @@
 #import "EditEduViewController.h"
 
 #import "EditExpLineInputCell.h"
-
+#import "EducationModel.h"
 #import "ActionSheetPickView.h"
 
 
@@ -106,11 +106,13 @@ static NSString *identifierEditExpLineInputCell = @"EditExpLineInputCell";
     }
     
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    self.curOperation = [[HttpService defaultService]POST:URL_APPEND_PATH(@"/teacher/education") parameters:@{@"education":[edu toJSONString]}  JSONModelClass:[BaseModel class] success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    self.curOperation = [[HttpService defaultService]POST:URL_APPEND_PATH(@"/teacher/education") parameters:@{@"education":[edu toJSONString]}  JSONModelClass:[EducationModel class] success:^(AFHTTPRequestOperation *operation, id responseObject) {
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         
+        EducationModel *model = (EducationModel *)responseObject;
+        
         if (self.delegate) {
-            [self.delegate onEduAdded:edu];
+            [self.delegate onEduAdded:model.data];
             [self.navigationController popViewControllerAnimated:YES];
         }
         
@@ -149,15 +151,16 @@ static NSString *identifierEditExpLineInputCell = @"EditExpLineInputCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 2) {
-        ActionSheetPickView *pickview=[[ActionSheetPickView alloc] initPickviewWithPlistName:@"level" isHaveNavControler:NO];
+        ActionSheetPickView *pickview = [[ActionSheetPickView alloc] initPickviewWithPlistName:@"level" isHaveNavControler:NO];
         pickview.title = @"学历";
         pickview.delegate = self;
         pickview.tag = 1;
         
         [pickview show];
+        [pickview selectRow:1 inComponent:0 animated:NO];
         
     } else if (indexPath.row == 3) {
-        ActionSheetPickView *pickview=[[ActionSheetPickView alloc] initPickviewWithPlistName:@"date" isHaveNavControler:NO];
+        ActionSheetPickView *pickview = [[ActionSheetPickView alloc] initPickviewWithPlistName:@"date" isHaveNavControler:NO];
         pickview.title = @"时间段";
         pickview.delegate = self;
         pickview.tag = 2;

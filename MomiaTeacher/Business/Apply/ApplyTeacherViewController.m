@@ -70,16 +70,21 @@ static NSString *applySuccessMsg = @"恭喜您！通过助教资格审核，您�
         [self.view removeLoadingBee];
         
         self.model = responseObject;
+        // 0 未提交过，1 审核通过，2 信息不完整，3 等待审核，4 简历审核未通过， 5 面试审核未通过，6 面试中
         int status = [self.model.data.status intValue];
         if (status == 1) {
             self.isApplySuccess = YES;
             [self.tableView reloadData];
             self.navigationItem.title = @"助教信息";
-//            [self.view showEmptyView:@"恭喜您！通过助教资格审核，您可以在课程管理中查看课程安排啦~"];
             
-        } else if (status == 3) {
+        } else if (status == 3 || status == 6) {
             [self.view showEmptyView:@"您的申请已经提交，正在审核中，请耐心等待1~2个工作日哦~"];
         } else {
+            if (status == 4) {
+                [self showDialogWithTitle:nil message:@"对不起，您的简历审核未通过"];
+            } else if (status == 5) {
+                [self showDialogWithTitle:nil message:@"对不起，您的面试审核未通过"];
+            }
             [self.tableView reloadData];
         }
         
@@ -298,33 +303,21 @@ static NSString *applySuccessMsg = @"恭喜您！通过助教资格审核，您�
 #pragma mark - Edit exp & edu delegate
 
 - (void)onExpAdded:(Experience *)exp {
-    if ([exp.ids intValue] == 0) {
-        NSMutableArray *array;
-        if (self.model.data.experiences) {
-            array = [[NSMutableArray alloc]initWithArray:self.model.data.experiences];
-        } else {
-            array = [[NSMutableArray alloc]init];
+    BOOL isNew = YES;
+    for (Experience *experience in self.model.data.experiences) {
+        if ([exp.ids intValue] == [experience.ids intValue]) {
+            experience.school = exp.school;
+            experience.post = exp.post;
+            experience.time = exp.time;
+            experience.content = exp.content;
+            isNew = NO;
+            break;
         }
+    }
+    if (isNew) {
+        NSMutableArray *array = [[NSMutableArray alloc]initWithArray:self.model.data.experiences];
         [array addObject:exp];
         self.model.data.experiences = (NSMutableArray<Experience> *)array;
-        
-    } else {
-        if (self.model.data.experiences.count > 0) {
-            for (Experience *experience in self.model.data.experiences) {
-                if ([exp.ids intValue] == [experience.ids intValue]) {
-                    experience.school = exp.school;
-                    experience.post = exp.post;
-                    experience.time = exp.time;
-                    experience.content = exp.content;
-                    break;
-                }
-            }
-            
-        } else {
-            NSMutableArray *array = [[NSMutableArray alloc]init];
-            [array addObject:exp];
-            self.model.data.experiences = (NSMutableArray<Experience> *)array;
-        }
     }
     [self.tableView reloadData];
 }
@@ -337,33 +330,21 @@ static NSString *applySuccessMsg = @"恭喜您！通过助教资格审核，您�
 }
 
 - (void)onEduAdded:(Education *)edu {
-    if ([edu.ids intValue] == 0) {
-        NSMutableArray *array;
-        if (self.model.data.educations) {
-            array = [[NSMutableArray alloc]initWithArray:self.model.data.educations];
-        } else {
-            array = [[NSMutableArray alloc]init];
+    BOOL isNew = YES;
+    for (Education *education in self.model.data.educations) {
+        if ([edu.ids intValue] == [education.ids intValue]) {
+            education.school = edu.school;
+            education.major = edu.major;
+            education.time = edu.time;
+            education.level = edu.level;
+            isNew = NO;
+            break;
         }
+    }
+    if (isNew) {
+        NSMutableArray *array = [[NSMutableArray alloc]initWithArray:self.model.data.educations];
         [array addObject:edu];
         self.model.data.educations = (NSMutableArray<Education> *)array;
-        
-    } else {
-        if (self.model.data.educations.count > 0) {
-            for (Education *education in self.model.data.educations) {
-                if ([edu.ids intValue] == [education.ids intValue]) {
-                    education.school = edu.school;
-                    education.major = edu.major;
-                    education.time = edu.time;
-                    education.level = edu.level;
-                    break;
-                }
-            }
-            
-        } else {
-            NSMutableArray *array = [[NSMutableArray alloc]init];
-            [array addObject:edu];
-            self.model.data.educations = (NSMutableArray<Education> *)array;
-        }
     }
     [self.tableView reloadData];
 }
@@ -424,7 +405,7 @@ static NSString *applySuccessMsg = @"恭喜您！通过助教资格审核，您�
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     if (self.model) {
         int status = [self.model.data.status intValue];
-        if (status == 0 || status == 1 || status == 2 || status == 4) {
+        if (status == 0 || status == 1 || status == 2 || status == 4 || status == 5) {
             return 3;
         }
     }

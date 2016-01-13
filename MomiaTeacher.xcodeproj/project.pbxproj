@@ -67,6 +67,8 @@
 		BCAF11EF1C3A87550089945B /* StudentAddCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF11EE1C3A87550089945B /* StudentAddCommentViewController.m */; };
 		BCAF11F31C3A892D0089945B /* CharacterTagsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAF11F11C3A892D0089945B /* CharacterTagsCell.m */; };
 		BCAF11F41C3A892D0089945B /* CharacterTagsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCAF11F21C3A892D0089945B /* CharacterTagsCell.xib */; };
+		BCB0C94A1C4607980074EBAF /* EducationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB0C9491C4607980074EBAF /* EducationModel.m */; };
+		BCB0C94D1C4607C30074EBAF /* ExperienceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB0C94C1C4607C30074EBAF /* ExperienceModel.m */; };
 		BCEA00001C2AA07800CB082D /* MLSelectPhotoPickerGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEAFF3F1C2AA07800CB082D /* MLSelectPhotoPickerGroupViewController.m */; };
 		BCEA00011C2AA07800CB082D /* MLSelectPhotoPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEAFF411C2AA07800CB082D /* MLSelectPhotoPickerViewController.m */; };
 		BCEA00021C2AA07800CB082D /* MLPhotoPickerImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEAFF441C2AA07800CB082D /* MLPhotoPickerImageView.m */; };
@@ -437,6 +439,10 @@
 		BCAF11F01C3A892D0089945B /* CharacterTagsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CharacterTagsCell.h; path = Manager/Views/CharacterTagsCell.h; sourceTree = "<group>"; };
 		BCAF11F11C3A892D0089945B /* CharacterTagsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CharacterTagsCell.m; path = Manager/Views/CharacterTagsCell.m; sourceTree = "<group>"; };
 		BCAF11F21C3A892D0089945B /* CharacterTagsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CharacterTagsCell.xib; path = Manager/Views/CharacterTagsCell.xib; sourceTree = "<group>"; };
+		BCB0C9481C4607980074EBAF /* EducationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EducationModel.h; path = Apply/EducationModel.h; sourceTree = "<group>"; };
+		BCB0C9491C4607980074EBAF /* EducationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EducationModel.m; path = Apply/EducationModel.m; sourceTree = "<group>"; };
+		BCB0C94B1C4607C30074EBAF /* ExperienceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExperienceModel.h; path = Apply/ExperienceModel.h; sourceTree = "<group>"; };
+		BCB0C94C1C4607C30074EBAF /* ExperienceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExperienceModel.m; path = Apply/ExperienceModel.m; sourceTree = "<group>"; };
 		BCEA001C1C2AA0B600CB082D /* ChatGroupMemberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatGroupMemberViewController.h; sourceTree = "<group>"; };
 		BCEA001D1C2AA0B600CB082D /* ChatGroupMemberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatGroupMemberViewController.m; sourceTree = "<group>"; };
 		BCEA001E1C2AA0B600CB082D /* ChatListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatListViewController.h; sourceTree = "<group>"; };
@@ -1099,6 +1105,10 @@
 				BCAF11C91C33D3740089945B /* Experience.m */,
 				BCAF11CB1C33D3850089945B /* Education.h */,
 				BCAF11CC1C33D3850089945B /* Education.m */,
+				BCB0C9481C4607980074EBAF /* EducationModel.h */,
+				BCB0C9491C4607980074EBAF /* EducationModel.m */,
+				BCB0C94B1C4607C30074EBAF /* ExperienceModel.h */,
+				BCB0C94C1C4607C30074EBAF /* ExperienceModel.m */,
 			);
 			name = Apply;
 			sourceTree = "<group>";
@@ -2326,7 +2336,9 @@
 				BCEAFFE71C2AA07800CB082D /* DatePickerSheet.m in Sources */,
 				BCEAFF9B1C2AA07800CB082D /* HomeworkList.m in Sources */,
 				BCEAFFD01C2AA07800CB082D /* UserTimelineModel.m in Sources */,
+				BCB0C94D1C4607C30074EBAF /* ExperienceModel.m in Sources */,
 				BCEAFFF91C2AA07800CB082D /* MLSelectPhotoAssets.m in Sources */,
+				BCB0C94A1C4607980074EBAF /* EducationModel.m in Sources */,
 				BCEAFF8D1C2AA07800CB082D /* IMUserGroupListModel.m in Sources */,
 				BCEAFF951C2AA07800CB082D /* CourseBookListModel.m in Sources */,
 				BCEAFFDA1C2AA07800CB082D /* ConvertFromXib.m in Sources */,

@@ -309,6 +309,13 @@
     [_pickerViewContainer.layer addAnimation:self.showMenuAnimation forKey:@"showMenu"];
     [CATransaction commit];
     
+    _resultString = nil;
+    
+}
+
+- (void)selectRow:(NSInteger)row inComponent:(NSInteger)component animated:(BOOL)animated {
+    [_pickerView selectRow:row inComponent:component animated:animated];
+    _resultString=_plistArray[row];
 }
 
 - (void)dismiss {
@@ -421,10 +428,10 @@
 
 - (void)doneClick {
     if (_pickerViewContainer) {
-        if (_resultString) {
-            
-        } else if (_isLevelString) {
-            _resultString=[NSString stringWithFormat:@"%@",_plistArray[0]];
+        if (_isLevelString) {
+            if (_resultString == nil) {
+                _resultString=[NSString stringWithFormat:@"%@",_plistArray[0]];
+            }
             
         } else if (_isLevelArray) {
             _resultString=@"";

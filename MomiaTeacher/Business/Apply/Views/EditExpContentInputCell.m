@@ -13,9 +13,9 @@
 - (void)awakeFromNib {
     // Initialization code
     
-    self.contentTv.layer.borderColor = UIColorFromRGB(0xdddddd).CGColor;
-    self.contentTv.layer.borderWidth = 0.5;
-    self.contentTv.layer.cornerRadius = 5.0;
+    self.contentContainer.layer.borderColor = UIColorFromRGB(0xdddddd).CGColor;
+    self.contentContainer.layer.borderWidth = 0.5;
+    self.contentContainer.layer.cornerRadius = 5.0;
     
 }
 

@@ -54,13 +54,18 @@
 -(instancetype)initDatePickWithDate:(NSDate *)defaulDate datePickerMode:(UIDatePickerMode)datePickerMode isHaveNavControler:(BOOL)isHaveNavControler;
 
 /**
- *   移除本控件
+ *  移除本控件
  */
 -(void)remove;
 /**
  *  显示本控件
  */
 -(void)show;
+
+/**
+ *  设置选中
+ */
+- (void)selectRow:(NSInteger)row inComponent:(NSInteger)component animated:(BOOL)animated;
 
 @end
 

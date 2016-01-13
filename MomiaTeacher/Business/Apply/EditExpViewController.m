@@ -10,7 +10,7 @@
 
 #import "EditExpLineInputCell.h"
 #import "EditExpContentInputCell.h"
-
+#import "ExperienceModel.h"
 #import "ActionSheetPickView.h"
 
 #define MAX_LIMIT_NUMS     500 //最大输入只能100个字符
@@ -110,11 +110,13 @@ static NSString *identifierEditExpContentInputCell = @"EditExpContentInputCell";
     }
     
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    self.curOperation = [[HttpService defaultService]POST:URL_APPEND_PATH(@"/teacher/experience") parameters:@{@"experience":[exp toJSONString]}  JSONModelClass:[BaseModel class] success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    self.curOperation = [[HttpService defaultService]POST:URL_APPEND_PATH(@"/teacher/experience") parameters:@{@"experience":[exp toJSONString]}  JSONModelClass:[ExperienceModel class] success:^(AFHTTPRequestOperation *operation, id responseObject) {
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         
+        ExperienceModel *model = responseObject;
+        
         if (self.delegate) {
-            [self.delegate onExpAdded:exp];
+            [self.delegate onExpAdded:model.data];
             [self.navigationController popViewControllerAnimated:YES];
         }
         

@@ -10,6 +10,7 @@
 
 @interface EditExpContentInputCell : MOTableCell<MOTableCellDataProtocol>
 
+@property (weak, nonatomic) IBOutlet UIView *contentContainer;
 @property (weak, nonatomic) IBOutlet UITextView *contentTv;
 @property (weak, nonatomic) IBOutlet UILabel *countLabel;
 
