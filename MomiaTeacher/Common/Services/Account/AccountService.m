@@ -100,9 +100,6 @@
 
 - (void)logout:(UIViewController *)controller {
     self.account = nil;
-    if (controller) {
-        [controller.navigationController popToRootViewControllerAnimated:YES];
-    }
     [[RCIM sharedRCIM] logout];
 }
 

@@ -513,6 +513,7 @@
 {
     if (alertView.tag == 1001 && buttonIndex == 1) {
         // logout
+        [[AccountService defaultService] logout:self];
         [[AccountService defaultService] login:self success:^{
             [self.navigationController popToRootViewControllerAnimated:YES];
         }];
