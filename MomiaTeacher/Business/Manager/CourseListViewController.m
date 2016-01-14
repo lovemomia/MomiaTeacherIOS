@@ -116,6 +116,8 @@ static NSString * identifierMaterialListItemCell = @"CourseListItemCell";
                                                  success:^(AFHTTPRequestOperation *operation, id responseObject) {
                                                      if ([self.orderList count] == 0) {
                                                          [self.view removeLoadingBee];
+                                                     } else {
+                                                         [self.view removeEmptyView];
                                                      }
                                                      
                                                      CourseListModel *model = (CourseListModel *)responseObject;

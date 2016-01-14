@@ -48,6 +48,8 @@ static NSString * identifierGoingStudentListItemCell = @"GoingStudentListItemCel
     [[HttpService defaultService] GET:URL_APPEND_PATH(@"/teacher/course/ongoing") parameters:nil cacheType:CacheTypeDisable JSONModelClass:[CourseGoingModel class] success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if (self.model == nil) {
             [self.view removeLoadingBee];
+        } else {
+            [self.view removeEmptyView];
         }
         
         self.model = responseObject;
