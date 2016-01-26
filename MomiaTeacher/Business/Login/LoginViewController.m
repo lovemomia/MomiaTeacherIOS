@@ -12,6 +12,7 @@
 #import "UIImage+Color.h"
 #import "NSTimer+Block.h"
 #import "ForgetPasswordViewController.h"
+#import <RongIMKit/RongIMKit.h>
 
 @interface LoginViewController ()
 
@@ -142,6 +143,20 @@
                                  AccountModel *result = responseObject;
                                  [AccountService defaultService].account = result.data;
                                  self.loginSuccessBlock();
+                                 
+                                 // 快速集成第二步，连接融云服务器
+                                 [[RCIM sharedRCIM] connectWithToken:[AccountService defaultService].account.imToken success:^(NSString *userId) {
+                                     // Connect 成功
+                                     NSLog(@"RCIM connect success, uid:%@", userId);
+                                     
+                                 } error:^(RCConnectErrorCode status) {
+                                     // Connect 失败
+                                     NSLog(@"RCIM connect failed, status:%ld", status);
+                                     
+                                 } tokenIncorrect:^{
+                                     // Token 失效的状态处理
+                                     NSLog(@"RCIM connect failed, token incorrect");
+                                 }];
                              }
                              failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                                  [MBProgressHUD hideHUDForView:self.view animated:YES];

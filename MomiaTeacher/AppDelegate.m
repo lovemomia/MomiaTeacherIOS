@@ -383,6 +383,10 @@
         imUserDic = [NSMutableDictionary new];
     }
     
+    if ([userId isEqualToString:@"10020"]) {
+        return completion(nil);
+    }
+    
     User *user = [imUserDic objectForKey:userId];
     if (user) {
         RCUserInfo *ui = [[RCUserInfo alloc]init];

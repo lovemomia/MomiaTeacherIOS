@@ -128,15 +128,16 @@
                                   
                                   AccountModel *result = responseObject;
                                   [AccountService defaultService].account = result.data;
+                                  self.registerSuccessBlock();
                                   
                                   //前往选择我的状态页面
-                                  MyStatusViewController *controller = [[MyStatusViewController alloc]init];
-                                  
-                                  controller.operateSuccessBlock = ^(){
-                                      self.registerSuccessBlock();
-                                  };
-                                  
-                                  [self.navigationController pushViewController:controller animated:YES];
+//                                  MyStatusViewController *controller = [[MyStatusViewController alloc]init];
+//                                  
+//                                  controller.operateSuccessBlock = ^(){
+//                                      self.registerSuccessBlock();
+//                                  };
+//                                  
+//                                  [self.navigationController pushViewController:controller animated:YES];
                               }
      
                               failure:^(AFHTTPRequestOperation *operation, NSError *error) {
