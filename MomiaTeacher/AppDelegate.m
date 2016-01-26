@@ -48,26 +48,6 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    if ([[AccountService defaultService]isLogin]) {
-        self.root = [[MORootViewController alloc] init];
-        self.window.rootViewController = self.root;
-        NSString *imToken = [AccountService defaultService].account.imToken;
-        [self doRCIMConnect:imToken tryTime:3];
-        
-    } else {
-        LoginViewController *loginController = [[LoginViewController alloc]init];
-        loginController.loginSuccessBlock = ^(){
-            self.root = [[MORootViewController alloc] init];
-            self.root.isFirstLogin = YES;
-            self.window.rootViewController = self.root;
-            NSString *imToken = [AccountService defaultService].account.imToken;
-            [self doRCIMConnect:imToken tryTime:3];
-        };
-        MONavigationController *navController = [[MONavigationController alloc]initWithRootViewController:loginController];
-        self.window.rootViewController = navController;
-    }
-    [self.window makeKeyAndVisible];
-    
     // 微信注册
     [WXApi registerApp:kWechatAppKey];
     
@@ -101,25 +81,25 @@
     // 设置群组信息提供者。
     [[RCIM sharedRCIM] setGroupInfoDataSource:self];
     
-    // 快速集成第二步，连接融云服务器
-//    if ([[AccountService defaultService]isLogin]) {
-//        
-//        // 如果是老用户，刷新一下imToken
-//        NSString *imToken = [AccountService defaultService].account.imToken;
-//        if (imToken.length > 0) {
-//            [self doRCIMConnect:imToken tryTime:3];
-//            
-//        } else {
-//            [[HttpService defaultService] GET:URL_APPEND_PATH(@"/im/token") parameters:nil cacheType:CacheTypeDisable JSONModelClass:[IMTokenModel class] success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//                IMTokenModel *model = responseObject;
-//                [AccountService defaultService].account.imToken = model.data;
-//                [self doRCIMConnect:imToken tryTime:3];
-//                
-//            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//                NSLog(@"refresh imtoken failed");
-//            }];
-//        }
-//    }
+    if ([[AccountService defaultService]isLogin]) {
+        self.root = [[MORootViewController alloc] init];
+        self.window.rootViewController = self.root;
+        NSString *imToken = [AccountService defaultService].account.imToken;
+        [self doRCIMConnect:imToken tryTime:3];
+        
+    } else {
+        LoginViewController *loginController = [[LoginViewController alloc]init];
+        loginController.loginSuccessBlock = ^(){
+            self.root = [[MORootViewController alloc] init];
+            self.root.isFirstLogin = YES;
+            self.window.rootViewController = self.root;
+            NSString *imToken = [AccountService defaultService].account.imToken;
+            [self doRCIMConnect:imToken tryTime:3];
+        };
+        MONavigationController *navController = [[MONavigationController alloc]initWithRootViewController:loginController];
+        self.window.rootViewController = navController;
+    }
+    [self.window makeKeyAndVisible];
     
     /**
      * 统计推送打开率1
