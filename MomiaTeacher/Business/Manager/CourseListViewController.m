@@ -80,6 +80,8 @@ static NSString * identifierMaterialListItemCell = @"CourseListItemCell";
                                                      if ([self.totalCount intValue] == 0) {
                                                          [self.view showEmptyView:@"课程列表为空~"];
                                                          return;
+                                                     } else {
+                                                         [self.view removeEmptyView];
                                                      }
                                                      
                                                      [self.orderList removeAllObjects];

@@ -431,7 +431,12 @@
 
 -(void)onRCIMReceiveMessage:(RCMessage *)message left:(int)left
 {
-    [[NSNotificationCenter defaultCenter]postNotificationName:@"onMineDotChanged" object:nil];
+    if ([message.targetId isEqualToString:@"10000"]) {
+        //系统通知
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"onReceiveServerNotification" object:nil];
+    } else {
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"onMineDotChanged" object:nil];
+    }
 }
 
 @end

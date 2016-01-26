@@ -7,6 +7,7 @@
 //
 
 #import "ChatPublicViewController.h"
+#import <RongIMKit/RongIMKit.h>
 
 @interface ChatPublicViewController ()
 
@@ -37,6 +38,8 @@
     if (self.conversationDataRepository.count == 0) {
         [self.view showEmptyView:@"还没有系统消息哦～"];
     }
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onReceiveServerNotification:) name:@"onReceiveServerNotification" object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -49,6 +52,14 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"onReceiveServerNotification" object:nil];
+}
+
+- (void)onReceiveServerNotification:(NSNotification*)notify {
+    if (self.conversationDataRepository.count > 0) {
+        [self.view removeEmptyView];
+    }
 }
 
 - (RCConversationType)convertType:(NSNumber *)type {

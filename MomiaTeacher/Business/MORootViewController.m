@@ -111,6 +111,7 @@
     }
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onMineDotChanged:) name:@"onMineDotChanged" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onReceiveServerNotification:) name:@"onReceiveServerNotification" object:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -121,10 +122,15 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"onMineDotChanged" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"onReceiveServerNotification" object:nil];
 }
 
 - (void)onMineDotChanged:(NSNotification*)notify {
     [self makeGroupDotHidden];
+}
+
+- (void)onReceiveServerNotification:(NSNotification*)notify {
+    [self makeMineDotHidden];
 }
 
 - (void)makeGroupDotHidden {
@@ -134,6 +140,24 @@
         self.dotImage.backgroundColor = MO_APP_TextColor_red;
         CGRect tabFrame = self.tabBar.frame;
         CGFloat x = SCREEN_WIDTH * 3 / 8 + 10;
+        CGFloat y = ceilf(0.12 * tabFrame.size.height);
+        self.dotImage.frame = CGRectMake(x, y, 8, 8);
+        self.dotImage.layer.cornerRadius = 4;
+        [self.tabBar addSubview:self.dotImage];
+        [self.tabBar setNeedsDisplay];
+        
+    } else {
+        [self.dotImage removeFromSuperview];
+    }
+}
+
+- (void)makeMineDotHidden {
+    if ([[RCIMClient sharedRCIMClient] getUnreadCount:ConversationType_PRIVATE targetId:@"10000"] > 0) {
+        [self.dotImage removeFromSuperview];
+        self.dotImage = [[UIImageView alloc] init];
+        self.dotImage.backgroundColor = MO_APP_TextColor_red;
+        CGRect tabFrame = self.tabBar.frame;
+        CGFloat x = SCREEN_WIDTH * 7 / 8 + 10;
         CGFloat y = ceilf(0.12 * tabFrame.size.height);
         self.dotImage.frame = CGRectMake(x, y, 8, 8);
         self.dotImage.layer.cornerRadius = 4;

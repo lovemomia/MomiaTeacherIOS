@@ -205,6 +205,11 @@
                 if (row == 0) {
                     commonCell.titleLabel.text = @"系统消息";
                     commonCell.iconIv.image = [UIImage imageNamed:@"IconFeedback"];
+                    if ([[RCIMClient sharedRCIMClient] getUnreadCount:ConversationType_PRIVATE targetId:@"10000"] > 0) {
+                        commonCell.dotIv.hidden = NO;
+                    } else {
+                        commonCell.dotIv.hidden = YES;
+                    }
                     
                 } else {
                     commonCell.titleLabel.text = @"设置";
