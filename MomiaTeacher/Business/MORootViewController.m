@@ -25,6 +25,8 @@
 
 @property (nonatomic, strong) UIImageView *dotImage;
 
+@property (nonatomic, assign) BOOL hasShowApplyTeacher;
+
 @end
 
 @implementation MORootViewController
@@ -100,14 +102,20 @@
         return YES;
 }
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+}
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    if ([[AccountService defaultService]isLogin] && self.isFirstLogin) {
+    if ([[AccountService defaultService]isLogin] && self.isFirstLogin && !self.hasShowApplyTeacher) {
         Account *account = [AccountService defaultService].account;
         if ([account.role intValue] == 1) {
             [[UIApplication sharedApplication]openURL:[NSURL URLWithString:MOURL_STRING(@"applyteacher?fromLogin=1")]];
         }
+        self.hasShowApplyTeacher = YES;
     }
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onMineDotChanged:) name:@"onMineDotChanged" object:nil];
