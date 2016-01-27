@@ -67,7 +67,7 @@
         label.frame = CGRectMake(x, y, (sizeThatFit.width + 2 * kLabelPadding), kLabelHeight);
         
         x = x + label.width + kLabelPadding;
-        if (x > SCREEN_WIDTH) {
+        if (x > SCREEN_WIDTH - 90) {
             x = 0;
             y = y + kLabelHeight + kLabelPadding;
         }
@@ -111,7 +111,7 @@
         label.frame = CGRectMake(x, y, (sizeThatFit.width + 2 * kLabelPadding), kLabelHeight);
         
         x = x + label.width + kLabelPadding;
-        if (x > SCREEN_WIDTH) {
+        if (x > SCREEN_WIDTH - 90) {
             x = 0;
             y = y + kLabelHeight + kLabelPadding;
         }
