@@ -14,11 +14,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="68.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vYe-1X-r5Y">
-                        <rect key="frame" x="250" y="8" width="70" height="53"/>
+                    <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vYe-1X-r5Y" customClass="AvatarImageView">
+                        <rect key="frame" x="267" y="8" width="53" height="53"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="53" id="Cad-iy-JRh"/>
-                            <constraint firstAttribute="width" constant="70" id="jcQ-aE-Wil"/>
+                            <constraint firstAttribute="width" constant="53" id="jcQ-aE-Wil"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="头像" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abJ-jP-9Eo">
@@ -46,11 +46,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="68.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mb6-Pz-KGH">
-                        <rect key="frame" x="236" y="8" width="70" height="53"/>
+                    <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mb6-Pz-KGH" customClass="AvatarImageView">
+                        <rect key="frame" x="253" y="8" width="53" height="53"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="53" id="Pws-bz-kjF"/>
-                            <constraint firstAttribute="width" constant="70" id="c3E-ch-wtO"/>
+                            <constraint firstAttribute="width" constant="53" id="c3E-ch-wtO"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="头像" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qx0-Rl-tuI">

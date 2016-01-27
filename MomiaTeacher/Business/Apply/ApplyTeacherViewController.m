@@ -158,8 +158,8 @@ static NSString *applySuccessMsg = @"恭喜您！通过助教资格审核，您�
 // 改变图像的尺寸，方便上传服务器
 - (UIImage *)scaleFromImage: (UIImage *) image
 {
-    CGSize size = CGSizeMake(800, 800);
-    int scaleWidth = 800;
+    CGSize size = CGSizeMake(200, 200);
+    int scaleWidth = 200;
     if (image.size.width < size.width) {
         return image;
     }
@@ -649,7 +649,7 @@ static NSString *applySuccessMsg = @"恭喜您！通过助教资格审核，您�
             [self showDialogWithTitle:nil message:@"申请助教成功，请耐心等待审核哦~" tag:1001];
             
         } else {
-            NSString *message = @"个人资料填写不完整，可以在“我的-申请助教”中完善后重新提交";
+            NSString *message = @"个人资料填写不完整，可以在“我的-成为助教”中完善后重新提交";
             UIAlertView *alter = [[UIAlertView alloc] initWithTitle:nil message:message delegate:self cancelButtonTitle:@"继续填写" otherButtonTitles:@"跳过", nil];
             alter.tag = 1002;
             [alter show];
