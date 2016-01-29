@@ -226,8 +226,8 @@
     NSInteger row = indexPath.row;
     if (indexPath.section == 0) {
         if (row == 0) {
-            self.uploadBabyAvatarIndex = -1;
-            [self takePictureClick];
+//            self.uploadBabyAvatarIndex = -1;
+//            [self takePictureClick];
             return;
         } else if (row == 1) {
             title = @"昵称";
@@ -277,7 +277,7 @@
         if (cell == nil) {
             NSArray *arr = [[NSBundle mainBundle] loadNibNamed:@"PersonLogoCell" owner:self options:nil];
             cell = [arr objectAtIndex:0];
-            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            cell.accessoryType = UITableViewCellAccessoryNone;
         }
         UIImageView *avatarIv = (UIImageView *)[cell viewWithTag:1];
         UILabel *titleLabel = (UILabel *)[cell viewWithTag:2];

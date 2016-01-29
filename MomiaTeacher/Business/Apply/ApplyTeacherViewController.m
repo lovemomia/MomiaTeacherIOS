@@ -10,6 +10,7 @@
 #import "DatePickerSheet.h"
 #import "ApplyTeacherModel.h"
 #import "UploadImageModel.h"
+#import "AccountModel.h"
 
 #import "ApplyTeacherInputCell.h"
 #import "ApplyTeacherAddCell.h"
@@ -151,7 +152,22 @@ static NSString *applySuccessMsg = @"恭喜您！通过助教资格审核，您�
             UploadImageData *data = ((UploadImageModel *)responseObject).data;
             self.model.data.pic = data.path;
             [self.tableView reloadData];
+            
+            [self saveAccountAvatar:data.path];
         }
+    }];
+}
+
+- (void)saveAccountAvatar:(NSString *)url {
+    [[HttpService defaultService]POST:URL_APPEND_PATH(@"/user/avatar") parameters:@{@"avatar":url} JSONModelClass:[AccountModel class] success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        
+        AccountModel *result = (AccountModel *)responseObject;
+        [AccountService defaultService].account = result.data;
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        [self showDialogWithTitle:nil message:error.message];
     }];
 }
 

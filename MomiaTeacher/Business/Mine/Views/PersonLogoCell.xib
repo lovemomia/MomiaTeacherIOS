@@ -15,7 +15,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sMR-bm-Qdw" customClass="AvatarImageView">
-                        <rect key="frame" x="267" y="8" width="53" height="53"/>
+                        <rect key="frame" x="252" y="8" width="53" height="53"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="53" id="L2j-Gw-pbw"/>
                             <constraint firstAttribute="height" constant="53" id="rrE-k8-pDW"/>
@@ -29,7 +29,7 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="sMR-bm-Qdw" secondAttribute="trailing" id="5A9-R6-bms"/>
+                    <constraint firstAttribute="trailing" secondItem="sMR-bm-Qdw" secondAttribute="trailing" constant="15" id="5A9-R6-bms"/>
                     <constraint firstAttribute="bottom" secondItem="gwJ-m9-PeX" secondAttribute="bottom" constant="17.5" id="CVO-Cw-wh7"/>
                     <constraint firstItem="gwJ-m9-PeX" firstAttribute="leading" secondItem="zfk-WR-WBd" secondAttribute="leading" constant="13" id="Hhl-r5-tlP"/>
                     <constraint firstItem="sMR-bm-Qdw" firstAttribute="top" secondItem="zfk-WR-WBd" secondAttribute="top" constant="8" id="KUS-st-eWY"/>
