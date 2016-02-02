@@ -63,8 +63,9 @@
         [label mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(starView.mas_bottom).with.offset(8);
             make.left.equalTo(self.reviewContainer).with.offset(10);
-            make.right.equalTo(self.reviewContainer).with.offset(8);
+            make.right.equalTo(self.reviewContainer).with.offset(-8);
             make.bottom.lessThanOrEqualTo(self.reviewContainer).with.offset(-8);
+            make.height.greaterThanOrEqualTo(@30);
         }];
         label.numberOfLines = 0;
         label.textColor = UIColorFromRGB(0x333333);
