@@ -22,6 +22,7 @@
 @property (nonatomic, strong) Student *child;
 @property (nonatomic, strong) NSArray<StudentRecordTag> *tags;
 @property (nonatomic, strong) NSString *content;
+@property (nonatomic, strong) NSNumber<Optional> *selectAble;//是否可选，非服务器返回
 @end
 
 @interface StudentRecordModel : BaseModel

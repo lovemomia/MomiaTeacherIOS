@@ -65,6 +65,7 @@ static NSString * identifierStudentRecordContentCell = @"StudentRecordContentCel
                           parameters:@{@"coid":self.coid, @"sid":self.sid, @"cid":self.cid} cacheType:CacheTypeDisable JSONModelClass:[StudentRecordModel class]
                              success:^(AFHTTPRequestOperation *operation, id responseObject) {
                                  self.model = responseObject;
+                                 self.model.data.selectAble = [NSNumber numberWithBool:NO];
                                  [self.tableView reloadData];
                                  [self.view removeLoadingBee];
                              }

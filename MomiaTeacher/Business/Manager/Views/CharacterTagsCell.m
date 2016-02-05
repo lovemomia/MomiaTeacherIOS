@@ -94,10 +94,22 @@
 }
 
 + (CGFloat)heightWithTableView:(UITableView *)tableView withIdentifier:(NSString *)identifier forIndexPath:(NSIndexPath *)indexPath data:(StudentRecordModel *)data {
-    NSArray *tags = data.data.tags;
+    NSMutableArray *tags;
     
     CGFloat x = 0;
     CGFloat y = 0;
+    
+    if (data.data.selectAble && ![data.data.selectAble boolValue]) {
+        tags = [[NSMutableArray alloc] init];
+        for (StudentRecordTag *tag in data.data.tags) {
+            if ([tag.selected boolValue]) {
+                [tags addObject:tag];
+            }
+        }
+        
+    } else {
+        tags = [[NSMutableArray alloc]initWithArray:data.data.tags];
+    }
     
     for (int i = 0; i < tags.count; i++) {
         StudentRecordTag *tag = tags[i];
