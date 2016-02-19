@@ -48,6 +48,10 @@ static NSString * identifierMaterialListItemCell = @"CourseListItemCell";
     [self requestData];
 }
 
+- (void)refresh {
+    [self.tableView.mj_header beginRefreshing];
+}
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     

@@ -10,4 +10,6 @@
 
 @interface CourseListViewController : MOTableViewController
 
+- (void)refresh;
+
 @end

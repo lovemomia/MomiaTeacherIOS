@@ -12,10 +12,14 @@
 #import "LJViewPager.h"
 #import "LJTabBar.h"
 
-@interface CourseManagerViewController ()<LJViewPagerDataSource, LJViewPagerDelegate>
+@interface CourseManagerViewController ()<LJViewPagerDataSource, LJViewPagerDelegate, LJTabBarDelegate>
 
 @property (strong, nonatomic) LJViewPager *viewPager;
 @property (strong, nonatomic) LJTabBar *tabBar;
+
+@property (strong, nonatomic) CourseGoingViewController *courseGoingVC;
+@property (strong, nonatomic) CourseListViewController *courseUnstartVC;
+@property (strong, nonatomic) CourseListViewController *courseFinishVC;
 
 @end
 
@@ -45,6 +49,7 @@
     self.tabBar.textFont = [UIFont systemFontOfSize:16];
     self.tabBar.selectedTextColor = MO_APP_ThemeColor;
     self.tabBar.indicatorColor = MO_APP_ThemeColor;
+    self.tabBar.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -63,20 +68,43 @@
 
 - (UIViewController *)viewPager:(LJViewPager *)viewPager controllerAtPage:(NSInteger)page {
     if (page == 0) {
-        return [[CourseGoingViewController alloc]initWithParams:nil];
+        self.courseGoingVC = [[CourseGoingViewController alloc]initWithParams:nil];
+        return self.courseGoingVC;
+        
     } else if (page == 1) {
-        return [[CourseListViewController alloc]initWithParams:@{@"status":@"0"}];
+        self.courseUnstartVC = [[CourseListViewController alloc]initWithParams:@{@"status":@"0"}];
+        return self.courseUnstartVC;
+        
     } else {
-        return [[CourseListViewController alloc]initWithParams:@{@"status":@"1"}];
+        self.courseFinishVC = [[CourseListViewController alloc]initWithParams:@{@"status":@"1"}];
+        return self.courseFinishVC;
     }
 }
 
 #pragma mark - pager view delegate
 - (void)viewPager:(LJViewPager *)viewPager didScrollToPage:(NSInteger)page {
+    if (page == 0) {
+        [self.courseGoingVC refresh];
+    } else if (page == 1) {
+        [self.courseUnstartVC refresh];
+    } else {
+        [self.courseFinishVC refresh];
+    }
 }
 
 - (void)viewPager:(LJViewPager *)viewPager didScrollToOffset:(CGPoint)offset {
     
+}
+
+#pragma mark - tabbar delegate
+- (void)tabBar:(LJTabBar *)tabBar didSelectedItemAtIndex:(NSUInteger)index {
+    if (index == 0) {
+        [self.courseGoingVC refresh];
+    } else if (index == 1) {
+        [self.courseUnstartVC refresh];
+    } else {
+        [self.courseFinishVC refresh];
+    }
 }
 
 - (UIView *)tabBar {

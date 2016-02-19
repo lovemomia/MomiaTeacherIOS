@@ -10,4 +10,6 @@
 
 @interface CourseGoingViewController : MOTableViewController
 
+- (void)refresh;
+
 @end

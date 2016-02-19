@@ -40,6 +40,10 @@ static NSString * identifierGoingStudentListItemCell = @"GoingStudentListItemCel
     [self requestData];
 }
 
+- (void)refresh {
+    [self.tableView.mj_header beginRefreshing];
+}
+
 - (void)requestData {
     if (self.model == nil) {
         [self.view showLoadingBee];
