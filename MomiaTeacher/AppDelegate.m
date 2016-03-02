@@ -11,7 +11,6 @@
 #import "URLMappingManager.h"
 #import "MONavigationController.h"
 #import "LoginViewController.h"
-#import <AlipaySDK/AlipaySDK.h>
 #import <RongIMKit/RongIMKit.h>
 #import "IQKeyboardManager.h"
 
@@ -191,16 +190,16 @@
     }
     
     //如果极简开发包不可用,会跳转支付宝钱包进行支付,需要将支付宝钱包的支付结果回传给开 发包
-    if ([url.host isEqualToString:@"safepay"]) {
-        [[AlipaySDK defaultService] processOrderWithPaymentResult:url
-                                                  standbyCallback:^(NSDictionary *resultDic) {
-                                                      NSLog(@"result = %@",resultDic);
-                                                  }]; }
-    if ([url.host isEqualToString:@"platformapi"]){//支付宝钱包快登授权返回 authCode
-        [[AlipaySDK defaultService] processAuthResult:url standbyCallback:^(NSDictionary *resultDic) {
-            NSLog(@"result = %@",resultDic);
-        }];
-    }
+//    if ([url.host isEqualToString:@"safepay"]) {
+//        [[AlipaySDK defaultService] processOrderWithPaymentResult:url
+//                                                  standbyCallback:^(NSDictionary *resultDic) {
+//                                                      NSLog(@"result = %@",resultDic);
+//                                                  }]; }
+//    if ([url.host isEqualToString:@"platformapi"]){//支付宝钱包快登授权返回 authCode
+//        [[AlipaySDK defaultService] processAuthResult:url standbyCallback:^(NSDictionary *resultDic) {
+//            NSLog(@"result = %@",resultDic);
+//        }];
+//    }
     
     return [WXApi handleOpenURL:url delegate:self];
 }

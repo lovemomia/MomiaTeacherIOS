@@ -139,10 +139,7 @@
 		BCEA022C1C2AA0B600CB082D /* SettingMsgCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCEA016C1C2AA0B600CB082D /* SettingMsgCell.xib */; };
 		BCEA022D1C2AA0B600CB082D /* ActivityWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEA016F1C2AA0B600CB082D /* ActivityWebViewController.m */; };
 		BCEA022F1C2AA1B900CB082D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCEA022E1C2AA1B800CB082D /* Images.xcassets */; };
-		BCEA02561C2AAE8400CB082D /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BCEA02311C2AAE8400CB082D /* AlipaySDK.bundle */; };
-		BCEA02571C2AAE8400CB082D /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEA02321C2AAE8400CB082D /* AlipaySDK.framework */; };
 		BCEA02581C2AAE8400CB082D /* BaiduMapAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEA02341C2AAE8400CB082D /* BaiduMapAPI.framework */; };
-		BCEA025B1C2AAE8400CB082D /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BCEA02421C2AAE8400CB082D /* WeiboSDK.bundle */; };
 		BCEA025C1C2AAE8400CB082D /* Emoji.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCEA02461C2AAE8400CB082D /* Emoji.plist */; };
 		BCEA025D1C2AAE8400CB082D /* RongCloudKit.strings in Resources */ = {isa = PBXBuildFile; fileRef = BCEA02471C2AAE8400CB082D /* RongCloudKit.strings */; };
 		BCEA025E1C2AAE8400CB082D /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEA02491C2AAE8400CB082D /* libopencore-amrnb.a */; };
@@ -517,20 +514,7 @@
 		BCEA016E1C2AA0B600CB082D /* ActivityWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityWebViewController.h; sourceTree = "<group>"; };
 		BCEA016F1C2AA0B600CB082D /* ActivityWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityWebViewController.m; sourceTree = "<group>"; };
 		BCEA022E1C2AA1B800CB082D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		BCEA02311C2AAE8400CB082D /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlipaySDK.bundle; sourceTree = "<group>"; };
-		BCEA02321C2AAE8400CB082D /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
 		BCEA02341C2AAE8400CB082D /* BaiduMapAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI.framework; sourceTree = "<group>"; };
-		BCEA023A1C2AAE8400CB082D /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
-		BCEA023B1C2AAE8400CB082D /* WBHttpRequest+WeiboShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboShare.h"; sourceTree = "<group>"; };
-		BCEA023C1C2AAE8400CB082D /* WBHttpRequest+WeiboToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboToken.h"; sourceTree = "<group>"; };
-		BCEA023D1C2AAE8400CB082D /* WBHttpRequest+WeiboUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboUser.h"; sourceTree = "<group>"; };
-		BCEA023E1C2AAE8400CB082D /* WBHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBHttpRequest.h; sourceTree = "<group>"; };
-		BCEA023F1C2AAE8400CB082D /* WBSDKBasicButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSDKBasicButton.h; sourceTree = "<group>"; };
-		BCEA02401C2AAE8400CB082D /* WBSDKCommentButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSDKCommentButton.h; sourceTree = "<group>"; };
-		BCEA02411C2AAE8400CB082D /* WBSDKRelationshipButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSDKRelationshipButton.h; sourceTree = "<group>"; };
-		BCEA02421C2AAE8400CB082D /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
-		BCEA02431C2AAE8400CB082D /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
-		BCEA02441C2AAE8400CB082D /* WeiboUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboUser.h; sourceTree = "<group>"; };
 		BCEA02461C2AAE8400CB082D /* Emoji.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Emoji.plist; sourceTree = "<group>"; };
 		BCEA02481C2AAE8400CB082D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/RongCloudKit.strings; sourceTree = "<group>"; };
 		BCEA02491C2AAE8400CB082D /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
@@ -918,7 +902,6 @@
 				BCEA02631C2AAE8400CB082D /* libWeChatSDK.a in Frameworks */,
 				BCEA02621C2AAE8400CB082D /* RongIMLib.framework in Frameworks */,
 				84AC208F870ED66E2640282D /* libPods.a in Frameworks */,
-				BCEA02571C2AAE8400CB082D /* AlipaySDK.framework in Frameworks */,
 				BCEA02611C2AAE8400CB082D /* RongIMKit.framework in Frameworks */,
 				BCEA02581C2AAE8400CB082D /* BaiduMapAPI.framework in Frameworks */,
 			);
@@ -1280,10 +1263,7 @@
 			isa = PBXGroup;
 			children = (
 				BC6CF52D1C3CBFDC006F314C /* IQKeyBoardManager */,
-				BCEA02311C2AAE8400CB082D /* AlipaySDK.bundle */,
-				BCEA02321C2AAE8400CB082D /* AlipaySDK.framework */,
 				BCEA02331C2AAE8400CB082D /* BaiduMap */,
-				BCEA02391C2AAE8400CB082D /* libWeiboSDK */,
 				BCEA02451C2AAE8400CB082D /* Rong_Cloud_iOS_SDK_v2_4_0_stable */,
 				BCEA02501C2AAE8400CB082D /* Umeng */,
 				BCEA02511C2AAE8400CB082D /* WeChatSDK_1.6 */,
@@ -1297,24 +1277,6 @@
 				BCEA02341C2AAE8400CB082D /* BaiduMapAPI.framework */,
 			);
 			path = BaiduMap;
-			sourceTree = "<group>";
-		};
-		BCEA02391C2AAE8400CB082D /* libWeiboSDK */ = {
-			isa = PBXGroup;
-			children = (
-				BCEA023A1C2AAE8400CB082D /* libWeiboSDK.a */,
-				BCEA023B1C2AAE8400CB082D /* WBHttpRequest+WeiboShare.h */,
-				BCEA023C1C2AAE8400CB082D /* WBHttpRequest+WeiboToken.h */,
-				BCEA023D1C2AAE8400CB082D /* WBHttpRequest+WeiboUser.h */,
-				BCEA023E1C2AAE8400CB082D /* WBHttpRequest.h */,
-				BCEA023F1C2AAE8400CB082D /* WBSDKBasicButton.h */,
-				BCEA02401C2AAE8400CB082D /* WBSDKCommentButton.h */,
-				BCEA02411C2AAE8400CB082D /* WBSDKRelationshipButton.h */,
-				BCEA02421C2AAE8400CB082D /* WeiboSDK.bundle */,
-				BCEA02431C2AAE8400CB082D /* WeiboSDK.h */,
-				BCEA02441C2AAE8400CB082D /* WeiboUser.h */,
-			);
-			path = libWeiboSDK;
 			sourceTree = "<group>";
 		};
 		BCEA02451C2AAE8400CB082D /* Rong_Cloud_iOS_SDK_v2_4_0_stable */ = {
@@ -2141,6 +2103,7 @@
 				TargetAttributes = {
 					BCEAFDC41C2A9A8400CB082D = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = P2YX7NM9FK;
 					};
 					BCEAFDDD1C2A9A8400CB082D = {
 						CreatedOnToolsVersion = 7.2;
@@ -2207,7 +2170,6 @@
 				BCEAFDD51C2A9A8400CB082D /* Assets.xcassets in Resources */,
 				BCAF11851C2D45490089945B /* GoingStudentListItemCell.xib in Resources */,
 				BCEAFFEE1C2AA07800CB082D /* LoadingErrorCell.xib in Resources */,
-				BCEA02561C2AAE8400CB082D /* AlipaySDK.bundle in Resources */,
 				BCEA01E41C2AA0B600CB082D /* LoginCell.xib in Resources */,
 				BCEA000A1C2AA07800CB082D /* MLSelectPhoto.bundle in Resources */,
 				BCEA01F81C2AA0B600CB082D /* UserInfoHeaderView.xib in Resources */,
@@ -2228,7 +2190,6 @@
 				BCAF11D11C33ED330089945B /* ActionSheetPickView.xib in Resources */,
 				BCEA02641C2AAE8400CB082D /* read_me.txt in Resources */,
 				BCEA01FA1C2AA0B600CB082D /* UserTimelineCell.xib in Resources */,
-				BCEA025B1C2AAE8400CB082D /* WeiboSDK.bundle in Resources */,
 				BCEAFF891C2AA07800CB082D /* mapping.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2646,6 +2607,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2670,6 +2633,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.youxing.SogoTeacher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -2679,6 +2643,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2699,6 +2665,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.youxing.SogoTeacher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
