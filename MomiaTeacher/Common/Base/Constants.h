@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 Deng Jun. All rights reserved.
 //
 
-#define MO_DEBUG       1 // 调试开关 (0线上，1调试) (现在分target编译，定义到debug target的plist中了)
+#define MO_DEBUG       0 // 调试开关 (0线上，1调试) (现在分target编译，定义到debug target的plist中了)
 
 // API Domain
 // 线上环境
