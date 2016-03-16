@@ -118,7 +118,6 @@
 		BCEA01E61C2AA0B600CB082D /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEA00F21C2AA0B600CB082D /* FeedbackViewController.m */; };
 		BCEA01E71C2AA0B600CB082D /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEA00F41C2AA0B600CB082D /* MineViewController.m */; };
 		BCEA01EA1C2AA0B600CB082D /* PersonInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEA00FA1C2AA0B600CB082D /* PersonInfoViewController.m */; };
-		BCEA01EB1C2AA0B600CB082D /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEA00FC1C2AA0B600CB082D /* ShareViewController.m */; };
 		BCEA01EC1C2AA0B600CB082D /* UserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEA00FE1C2AA0B600CB082D /* UserInfoViewController.m */; };
 		BCEA01ED1C2AA0B600CB082D /* FeedbackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEA01011C2AA0B600CB082D /* FeedbackCell.m */; };
 		BCEA01EE1C2AA0B600CB082D /* FeedbackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCEA01021C2AA0B600CB082D /* FeedbackCell.xib */; };
@@ -126,8 +125,6 @@
 		BCEA01F21C2AA0B600CB082D /* PersonChildHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEA01081C2AA0B600CB082D /* PersonChildHeaderCell.m */; };
 		BCEA01F31C2AA0B600CB082D /* PersonChildHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCEA01091C2AA0B600CB082D /* PersonChildHeaderCell.xib */; };
 		BCEA01F41C2AA0B600CB082D /* PersonLogoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCEA010A1C2AA0B600CB082D /* PersonLogoCell.xib */; };
-		BCEA01F51C2AA0B600CB082D /* ShareViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEA010C1C2AA0B600CB082D /* ShareViewCell.m */; };
-		BCEA01F61C2AA0B600CB082D /* ShareViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCEA010D1C2AA0B600CB082D /* ShareViewCell.xib */; };
 		BCEA01F71C2AA0B600CB082D /* UserInfoHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEA010F1C2AA0B600CB082D /* UserInfoHeaderView.m */; };
 		BCEA01F81C2AA0B600CB082D /* UserInfoHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCEA01101C2AA0B600CB082D /* UserInfoHeaderView.xib */; };
 		BCEA01F91C2AA0B600CB082D /* UserTimelineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEA01121C2AA0B600CB082D /* UserTimelineCell.m */; };
@@ -147,8 +144,6 @@
 		BCEA02601C2AAE8400CB082D /* RongCloud.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BCEA024B1C2AAE8400CB082D /* RongCloud.bundle */; };
 		BCEA02611C2AAE8400CB082D /* RongIMKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEA024C1C2AAE8400CB082D /* RongIMKit.framework */; };
 		BCEA02621C2AAE8400CB082D /* RongIMLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEA024D1C2AAE8400CB082D /* RongIMLib.framework */; };
-		BCEA02631C2AAE8400CB082D /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEA02521C2AAE8400CB082D /* libWeChatSDK.a */; };
-		BCEA02641C2AAE8400CB082D /* read_me.txt in Resources */ = {isa = PBXBuildFile; fileRef = BCEA02531C2AAE8400CB082D /* read_me.txt */; };
 		BCEA02671C2AB30D00CB082D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCEA02661C2AB30D00CB082D /* Info.plist */; };
 		BCEA026C1C2AB50E00CB082D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEA026B1C2AB50E00CB082D /* OpenGLES.framework */; };
 		BCEA026E1C2AB51900CB082D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEA026D1C2AB51900CB082D /* MapKit.framework */; };
@@ -276,8 +271,6 @@
 		BCEAFFDB1C2AA07800CB082D /* DateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEAFEEF1C2AA07800CB082D /* DateManager.m */; };
 		BCEAFFDC1C2AA07800CB082D /* MJRefreshHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEAFEF11C2AA07800CB082D /* MJRefreshHelper.m */; };
 		BCEAFFDE1C2AA07800CB082D /* StringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEAFEF51C2AA07800CB082D /* StringUtils.m */; };
-		BCEAFFDF1C2AA07800CB082D /* ThirdAccountHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEAFEF71C2AA07800CB082D /* ThirdAccountHelper.m */; };
-		BCEAFFE01C2AA07800CB082D /* ThirdShareHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEAFEF91C2AA07800CB082D /* ThirdShareHelper.m */; };
 		BCEAFFE11C2AA07800CB082D /* AvatarImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEAFEFC1C2AA07800CB082D /* AvatarImageView.m */; };
 		BCEAFFE21C2AA07800CB082D /* CommonHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEAFEFE1C2AA07800CB082D /* CommonHeaderView.m */; };
 		BCEAFFE31C2AA07800CB082D /* CommonHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCEAFEFF1C2AA07800CB082D /* CommonHeaderView.xib */; };
@@ -482,8 +475,6 @@
 		BCEA00F41C2AA0B600CB082D /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		BCEA00F91C2AA0B600CB082D /* PersonInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonInfoViewController.h; sourceTree = "<group>"; };
 		BCEA00FA1C2AA0B600CB082D /* PersonInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonInfoViewController.m; sourceTree = "<group>"; };
-		BCEA00FB1C2AA0B600CB082D /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
-		BCEA00FC1C2AA0B600CB082D /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
 		BCEA00FD1C2AA0B600CB082D /* UserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoViewController.h; sourceTree = "<group>"; };
 		BCEA00FE1C2AA0B600CB082D /* UserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoViewController.m; sourceTree = "<group>"; };
 		BCEA01001C2AA0B600CB082D /* FeedbackCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackCell.h; sourceTree = "<group>"; };
@@ -494,9 +485,6 @@
 		BCEA01081C2AA0B600CB082D /* PersonChildHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonChildHeaderCell.m; sourceTree = "<group>"; };
 		BCEA01091C2AA0B600CB082D /* PersonChildHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonChildHeaderCell.xib; sourceTree = "<group>"; };
 		BCEA010A1C2AA0B600CB082D /* PersonLogoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonLogoCell.xib; sourceTree = "<group>"; };
-		BCEA010B1C2AA0B600CB082D /* ShareViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewCell.h; sourceTree = "<group>"; };
-		BCEA010C1C2AA0B600CB082D /* ShareViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewCell.m; sourceTree = "<group>"; };
-		BCEA010D1C2AA0B600CB082D /* ShareViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareViewCell.xib; sourceTree = "<group>"; };
 		BCEA010E1C2AA0B600CB082D /* UserInfoHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoHeaderView.h; sourceTree = "<group>"; };
 		BCEA010F1C2AA0B600CB082D /* UserInfoHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoHeaderView.m; sourceTree = "<group>"; };
 		BCEA01101C2AA0B600CB082D /* UserInfoHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoHeaderView.xib; sourceTree = "<group>"; };
@@ -523,10 +511,6 @@
 		BCEA024C1C2AAE8400CB082D /* RongIMKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RongIMKit.framework; sourceTree = "<group>"; };
 		BCEA024D1C2AAE8400CB082D /* RongIMLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RongIMLib.framework; sourceTree = "<group>"; };
 		BCEA024E1C2AAE8400CB082D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/RongCloudKit.strings"; sourceTree = "<group>"; };
-		BCEA02521C2AAE8400CB082D /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
-		BCEA02531C2AAE8400CB082D /* read_me.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = read_me.txt; sourceTree = "<group>"; };
-		BCEA02541C2AAE8400CB082D /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
-		BCEA02551C2AAE8400CB082D /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		BCEA02651C2AAF9E00CB082D /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		BCEA02661C2AB30D00CB082D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCEA026B1C2AB50E00CB082D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -754,10 +738,6 @@
 		BCEAFEF11C2AA07800CB082D /* MJRefreshHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshHelper.m; sourceTree = "<group>"; };
 		BCEAFEF41C2AA07800CB082D /* StringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringUtils.h; sourceTree = "<group>"; };
 		BCEAFEF51C2AA07800CB082D /* StringUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringUtils.m; sourceTree = "<group>"; };
-		BCEAFEF61C2AA07800CB082D /* ThirdAccountHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdAccountHelper.h; sourceTree = "<group>"; };
-		BCEAFEF71C2AA07800CB082D /* ThirdAccountHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdAccountHelper.m; sourceTree = "<group>"; };
-		BCEAFEF81C2AA07800CB082D /* ThirdShareHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdShareHelper.h; sourceTree = "<group>"; };
-		BCEAFEF91C2AA07800CB082D /* ThirdShareHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdShareHelper.m; sourceTree = "<group>"; };
 		BCEAFEFB1C2AA07800CB082D /* AvatarImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvatarImageView.h; sourceTree = "<group>"; };
 		BCEAFEFC1C2AA07800CB082D /* AvatarImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvatarImageView.m; sourceTree = "<group>"; };
 		BCEAFEFD1C2AA07800CB082D /* CommonHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonHeaderView.h; sourceTree = "<group>"; };
@@ -899,7 +879,6 @@
 				BCEA026E1C2AB51900CB082D /* MapKit.framework in Frameworks */,
 				BCEA026C1C2AB50E00CB082D /* OpenGLES.framework in Frameworks */,
 				BCEA025E1C2AAE8400CB082D /* libopencore-amrnb.a in Frameworks */,
-				BCEA02631C2AAE8400CB082D /* libWeChatSDK.a in Frameworks */,
 				BCEA02621C2AAE8400CB082D /* RongIMLib.framework in Frameworks */,
 				84AC208F870ED66E2640282D /* libPods.a in Frameworks */,
 				BCEA02611C2AAE8400CB082D /* RongIMKit.framework in Frameworks */,
@@ -1196,8 +1175,6 @@
 				BCEA00F41C2AA0B600CB082D /* MineViewController.m */,
 				BCEA00F91C2AA0B600CB082D /* PersonInfoViewController.h */,
 				BCEA00FA1C2AA0B600CB082D /* PersonInfoViewController.m */,
-				BCEA00FB1C2AA0B600CB082D /* ShareViewController.h */,
-				BCEA00FC1C2AA0B600CB082D /* ShareViewController.m */,
 				BCEA00FD1C2AA0B600CB082D /* UserInfoViewController.h */,
 				BCEA00FE1C2AA0B600CB082D /* UserInfoViewController.m */,
 				BCEA00FF1C2AA0B600CB082D /* Views */,
@@ -1216,9 +1193,6 @@
 				BCEA01081C2AA0B600CB082D /* PersonChildHeaderCell.m */,
 				BCEA01091C2AA0B600CB082D /* PersonChildHeaderCell.xib */,
 				BCEA010A1C2AA0B600CB082D /* PersonLogoCell.xib */,
-				BCEA010B1C2AA0B600CB082D /* ShareViewCell.h */,
-				BCEA010C1C2AA0B600CB082D /* ShareViewCell.m */,
-				BCEA010D1C2AA0B600CB082D /* ShareViewCell.xib */,
 				BCEA010E1C2AA0B600CB082D /* UserInfoHeaderView.h */,
 				BCEA010F1C2AA0B600CB082D /* UserInfoHeaderView.m */,
 				BCEA01101C2AA0B600CB082D /* UserInfoHeaderView.xib */,
@@ -1266,7 +1240,6 @@
 				BCEA02331C2AAE8400CB082D /* BaiduMap */,
 				BCEA02451C2AAE8400CB082D /* Rong_Cloud_iOS_SDK_v2_4_0_stable */,
 				BCEA02501C2AAE8400CB082D /* Umeng */,
-				BCEA02511C2AAE8400CB082D /* WeChatSDK_1.6 */,
 			);
 			path = ThirdParty;
 			sourceTree = "<group>";
@@ -1298,17 +1271,6 @@
 			children = (
 			);
 			path = Umeng;
-			sourceTree = "<group>";
-		};
-		BCEA02511C2AAE8400CB082D /* WeChatSDK_1.6 */ = {
-			isa = PBXGroup;
-			children = (
-				BCEA02521C2AAE8400CB082D /* libWeChatSDK.a */,
-				BCEA02531C2AAE8400CB082D /* read_me.txt */,
-				BCEA02541C2AAE8400CB082D /* WXApi.h */,
-				BCEA02551C2AAE8400CB082D /* WXApiObject.h */,
-			);
-			path = WeChatSDK_1.6;
 			sourceTree = "<group>";
 		};
 		BCEA029F1C2AB6E500CB082D /* JSDropDownMenu */ = {
@@ -1788,10 +1750,6 @@
 				BCEAFEF11C2AA07800CB082D /* MJRefreshHelper.m */,
 				BCEAFEF41C2AA07800CB082D /* StringUtils.h */,
 				BCEAFEF51C2AA07800CB082D /* StringUtils.m */,
-				BCEAFEF61C2AA07800CB082D /* ThirdAccountHelper.h */,
-				BCEAFEF71C2AA07800CB082D /* ThirdAccountHelper.m */,
-				BCEAFEF81C2AA07800CB082D /* ThirdShareHelper.h */,
-				BCEAFEF91C2AA07800CB082D /* ThirdShareHelper.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -2142,7 +2100,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCAF11931C3285D20089945B /* ApplyTeacherInputCell.xib in Resources */,
-				BCEA01F61C2AA0B600CB082D /* ShareViewCell.xib in Resources */,
 				BCEA017C1C2AA0B600CB082D /* GroupNoticeView.xib in Resources */,
 				BCAF11D31C34C5660089945B /* date.plist in Resources */,
 				BC6CF55B1C3CBFDC006F314C /* IQKeyboardManager.bundle in Resources */,
@@ -2188,7 +2145,6 @@
 				BC6CF5241C3B6E15006F314C /* ContentInputCell.xib in Resources */,
 				BCEA01F41C2AA0B600CB082D /* PersonLogoCell.xib in Resources */,
 				BCAF11D11C33ED330089945B /* ActionSheetPickView.xib in Resources */,
-				BCEA02641C2AAE8400CB082D /* read_me.txt in Resources */,
 				BCEA01FA1C2AA0B600CB082D /* UserTimelineCell.xib in Resources */,
 				BCEAFF891C2AA07800CB082D /* mapping.plist in Resources */,
 			);
@@ -2272,7 +2228,6 @@
 				BCEA000D1C2AA07800CB082D /* MONetworkPhotoView.m in Sources */,
 				BCAF11801C2D2C280089945B /* CourseGoingModel.m in Sources */,
 				BCEA01E71C2AA0B600CB082D /* MineViewController.m in Sources */,
-				BCEAFFE01C2AA07800CB082D /* ThirdShareHelper.m in Sources */,
 				BCAF11BA1C33C5A10089945B /* EditExpViewController.m in Sources */,
 				BCEAFF871C2AA07800CB082D /* UITextView+Placeholder.m in Sources */,
 				BCEAFF8C1C2AA07800CB082D /* IMGroupModel.m in Sources */,
@@ -2397,14 +2352,12 @@
 				BCEA01E01C2AA0B600CB082D /* LoginViewController.m in Sources */,
 				BCEAFFCD1C2AA07800CB082D /* Child.m in Sources */,
 				BCAF11E81C3A4E2B0089945B /* StudentDetailCommentCell.m in Sources */,
-				BCEAFFDF1C2AA07800CB082D /* ThirdAccountHelper.m in Sources */,
 				BCAF118E1C3114850089945B /* ApplyTeacherModel.m in Sources */,
 				BCEAFFFC1C2AA07800CB082D /* MLSelectPhotoPickerGroup.m in Sources */,
 				BCEAFF811C2AA07800CB082D /* NSURL+MOURL.m in Sources */,
 				BCEAFF9C1C2AA07800CB082D /* Notice.m in Sources */,
 				BCEAFFC31C2AA07800CB082D /* WechatPayData.m in Sources */,
 				BCAF117D1C2D29A20089945B /* Student.m in Sources */,
-				BCEA01F51C2AA0B600CB082D /* ShareViewCell.m in Sources */,
 				BCAF11C61C33CEA50089945B /* EditExpContentInputCell.m in Sources */,
 				BC6CF5511C3CBFDC006F314C /* IQUIView+Hierarchy.m in Sources */,
 				BCEA000B1C2AA07800CB082D /* MOButton.m in Sources */,
@@ -2436,7 +2389,6 @@
 				BCEA01F21C2AA0B600CB082D /* PersonChildHeaderCell.m in Sources */,
 				BCEAFFCF1C2AA07800CB082D /* User.m in Sources */,
 				BCEAFFB51C2AA07800CB082D /* Order.m in Sources */,
-				BCEA01EB1C2AA0B600CB082D /* ShareViewController.m in Sources */,
 				BCEA00091C2AA07800CB082D /* MLSelectPhotoPickerGroupTableViewCell.m in Sources */,
 				BCEAFFB61C2AA07800CB082D /* OrderDetailModel.m in Sources */,
 				BCEAFFE91C2AA07800CB082D /* LJViewPager.m in Sources */,

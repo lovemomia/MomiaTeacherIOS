@@ -47,8 +47,6 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    // 微信注册
-    [WXApi registerApp:kWechatAppKey];
     
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
     [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
@@ -180,7 +178,7 @@
         [self handleOpenURL:url];
     }
     
-    return [WXApi handleOpenURL:url delegate:self];
+    return NO;
 }
 
 /* For iOS 4.2 and later */
@@ -201,7 +199,7 @@
 //        }];
 //    }
     
-    return [WXApi handleOpenURL:url delegate:self];
+    return NO;
 }
 
 - (void)handleOpenURL:(NSURL *)url

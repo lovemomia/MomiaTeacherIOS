@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WXApi.h"
 #import "MORootViewController.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate, WXApiDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

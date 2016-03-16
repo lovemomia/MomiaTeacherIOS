@@ -7,7 +7,6 @@
 //
 
 #import "SettingViewController.h"
-#import "ThirdShareHelper.h"
 #import "SGActionView.h"
 #import "AppDelegate.h"
 
@@ -58,10 +57,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (section == 0) {
-        return 1;
-    }
-    return 2;
+    return 1;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -83,27 +79,7 @@
         }
         
     } else if (indexPath.section == 1) {
-        if (indexPath.row == 0) {
-            ThirdShareHelper *helper = [ThirdShareHelper new];
-            [SGActionView showGridMenuWithTitle:@"分享给好友"
-                                     itemTitles:@[ @"微信好友", @"微信朋友圈"]
-                                         images:@[ [UIImage imageNamed:@"IconShareWechat"],
-                                                   [UIImage imageNamed:@"IconShareWechatTimeline"]]
-                                 selectedHandle:^(NSInteger index) {
-                                     NSString *url = @"http://m.sogokids.com/";
-                                     UIImage *thumb = [UIImage imageNamed:@"IconShareLogo"];
-                                     NSString *title = @"小松果，大世界，一起去探索";
-                                     NSString *desc = @"这里有最新鲜、最有趣、最具特色的亲子课程，来这里给孩子最美好的童年吧";
-                                     if (index == 1) {
-                                         [helper shareToWechat:url thumb:thumb title:title desc:desc scene:1];
-                                     } else if (index == 2) {
-                                         [helper shareToWechat:url thumb:thumb title:title desc:desc scene:2];
-                                     }
-                                 }];
-            
-        } else {
-            [self openURL:@"about"];
-        }
+        [self openURL:@"about"];
     }
 
 }
@@ -136,11 +112,7 @@
             }
             break;
         case 1:
-            if (row == 0) {
-                cell.textLabel.text = @"分享给好友";
-            } else {
-                cell.textLabel.text = @"关于我们";
-            }
+            cell.textLabel.text = @"关于我们";
             break;
         default:
             break;
