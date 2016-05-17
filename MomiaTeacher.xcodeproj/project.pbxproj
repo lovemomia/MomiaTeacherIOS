@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		84AC208F870ED66E2640282D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E61589321BB5578818D488 /* libPods.a */; };
+		B4077CDC5A84F81D348BC7EC /* libPods-MomiaTeacher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9C0836672705A05B03F913 /* libPods-MomiaTeacher.a */; };
 		BC6CF51F1C3B5DF0006F314C /* StudentRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6CF51E1C3B5DF0006F314C /* StudentRecordViewController.m */; };
 		BC6CF5231C3B6E15006F314C /* ContentInputCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6CF5211C3B6E15006F314C /* ContentInputCell.m */; };
 		BC6CF5241C3B6E15006F314C /* ContentInputCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC6CF5221C3B6E15006F314C /* ContentInputCell.xib */; };
@@ -332,9 +332,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6B4E3E7CB08A22D3A6C69F79 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		83E61589321BB5578818D488 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		908A67A643EA6A4D959938FF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		37C9AE84FF1AF0709522F161 /* Pods-MomiaTeacher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MomiaTeacher.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MomiaTeacher/Pods-MomiaTeacher.debug.xcconfig"; sourceTree = "<group>"; };
+		941040A72DA6F5B0F0491264 /* Pods-MomiaTeacher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MomiaTeacher.release.xcconfig"; path = "Pods/Target Support Files/Pods-MomiaTeacher/Pods-MomiaTeacher.release.xcconfig"; sourceTree = "<group>"; };
+		9A9C0836672705A05B03F913 /* libPods-MomiaTeacher.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MomiaTeacher.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC6CF51D1C3B5DF0006F314C /* StudentRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StudentRecordViewController.h; path = Manager/StudentRecordViewController.h; sourceTree = "<group>"; };
 		BC6CF51E1C3B5DF0006F314C /* StudentRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StudentRecordViewController.m; path = Manager/StudentRecordViewController.m; sourceTree = "<group>"; };
 		BC6CF5201C3B6E15006F314C /* ContentInputCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContentInputCell.h; path = Manager/Views/ContentInputCell.h; sourceTree = "<group>"; };
@@ -917,10 +917,10 @@
 				BCEA025E1C2AAE8400CB082D /* libopencore-amrnb.a in Frameworks */,
 				BCEA02631C2AAE8400CB082D /* libWeChatSDK.a in Frameworks */,
 				BCEA02621C2AAE8400CB082D /* RongIMLib.framework in Frameworks */,
-				84AC208F870ED66E2640282D /* libPods.a in Frameworks */,
 				BCEA02571C2AAE8400CB082D /* AlipaySDK.framework in Frameworks */,
 				BCEA02611C2AAE8400CB082D /* RongIMKit.framework in Frameworks */,
 				BCEA02581C2AAE8400CB082D /* BaiduMapAPI.framework in Frameworks */,
+				B4077CDC5A84F81D348BC7EC /* libPods-MomiaTeacher.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -941,11 +941,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		363968DDB7EA552742FAACA5 /* Pods */ = {
+		54BC02B26A51ADA82DE77D3D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				908A67A643EA6A4D959938FF /* Pods.debug.xcconfig */,
-				6B4E3E7CB08A22D3A6C69F79 /* Pods.release.xcconfig */,
+				37C9AE84FF1AF0709522F161 /* Pods-MomiaTeacher.debug.xcconfig */,
+				941040A72DA6F5B0F0491264 /* Pods-MomiaTeacher.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1436,8 +1436,8 @@
 				BCEAFDE11C2A9A8400CB082D /* MomiaTeacherTests */,
 				BCEAFDEC1C2A9A8400CB082D /* MomiaTeacherUITests */,
 				BCEAFDC61C2A9A8400CB082D /* Products */,
-				363968DDB7EA552742FAACA5 /* Pods */,
 				CE379B87D5481C4025310EFA /* Frameworks */,
+				54BC02B26A51ADA82DE77D3D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2067,7 +2067,7 @@
 				BCEA026F1C2AB52800CB082D /* libz.tbd */,
 				BCEA026D1C2AB51900CB082D /* MapKit.framework */,
 				BCEA026B1C2AB50E00CB082D /* OpenGLES.framework */,
-				83E61589321BB5578818D488 /* libPods.a */,
+				9A9C0836672705A05B03F913 /* libPods-MomiaTeacher.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -2079,11 +2079,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCEAFDF21C2A9A8400CB082D /* Build configuration list for PBXNativeTarget "MomiaTeacher" */;
 			buildPhases = (
-				7ED16143FC4DF55AD8C27042 /* Check Pods Manifest.lock */,
+				DE7D9BA287D90C559E22532B /* 📦 Check Pods Manifest.lock */,
 				BCEAFDC11C2A9A8400CB082D /* Sources */,
 				BCEAFDC21C2A9A8400CB082D /* Frameworks */,
 				BCEAFDC31C2A9A8400CB082D /* Resources */,
-				022123900FF0F1289D23EDAF /* Copy Pods Resources */,
+				34AE0041B320497036875F07 /* 📦 Embed Pods Frameworks */,
+				4FEDB3AA7B14A929712E70A4 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2250,29 +2251,44 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		022123900FF0F1289D23EDAF /* Copy Pods Resources */ = {
+		34AE0041B320497036875F07 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MomiaTeacher/Pods-MomiaTeacher-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7ED16143FC4DF55AD8C27042 /* Check Pods Manifest.lock */ = {
+		4FEDB3AA7B14A929712E70A4 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MomiaTeacher/Pods-MomiaTeacher-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE7D9BA287D90C559E22532B /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2642,7 +2658,7 @@
 		};
 		BCEAFDF31C2A9A8400CB082D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 908A67A643EA6A4D959938FF /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 37C9AE84FF1AF0709522F161 /* Pods-MomiaTeacher.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -2675,7 +2691,7 @@
 		};
 		BCEAFDF41C2A9A8400CB082D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6B4E3E7CB08A22D3A6C69F79 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 941040A72DA6F5B0F0491264 /* Pods-MomiaTeacher.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
